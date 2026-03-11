@@ -1,0 +1,323 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: eventsPage.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 09/02/2026
+
+=========================================================== */
+
+/* ===========================================================
+ANIMAÇÕES E ESTILO GLOBAL
+=========================================================== */
+@keyframes entrar {
+    to {
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-800px); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* ===========================================================
+FIELD
+=========================================================== */
+.fieldservico {
+width: 100%;
+max-width: 1200px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+padding: 0;
+will-change: transform, opacity;
+box-sizing: border-box;
+}
+
+
+/* ============================
+CHAMADA
+============================= */
+.chamadaCrepe p {
+text-align: center;
+font-size: 1.4rem;
+font-weight: 630;
+margin-top: 2rem;
+margin-bottom: 1rem;
+will-change: transform, opacity;
+animation: bounceInLeft 0.6s ease-in;
+}
+
+.container-fluid-eventos {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 3rem;
+margin-top: 2.5rem;
+margin-bottom: 2rem;
+}
+
+.img-fluid-eventos {
+display: block;
+object-fit: cover;
+width: 100%;
+max-width: 190px;
+max-height: 250px;
+border-radius: 5px;
+box-shadow: 1px 2px 20px rgb(0, 0, 0);
+will-change: transform, opacity;
+animation: entrar 1.5s forwards;
+transform: translateX(1500px);
+}
+
+.f1 {animation-delay: 0ms;}
+.f2 {animation-delay: 150ms;}
+.f3 {animation-delay: 250ms;}
+.f4 {animation-delay: 350ms;}
+.f5 {animation-delay: 450ms;}
+
+
+
+/* ============================
+SEÇÕES 3, 4, 5 e 6
+============================= */
+.containerServico3e4,
+.containerServico5e6 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+font-family: "Inter", sans-serif;
+gap: 1rem;
+}
+
+.containerServico3e4 {
+padding: 1rem 1rem 0rem 1rem !important;
+}
+
+.containerServico5e6 {
+padding: 0rem 1rem 1rem 1rem !important;
+}
+
+.nossoservico3, 
+.nossoservico4, .nossoservico5, .nossoservico6 {
+flex: 1;
+padding: 2rem;
+font-size: 1.05rem;
+text-align: left;
+letter-spacing: 1px;
+min-width: 250px;
+background: #ffffff;
+border-radius: 2px;
+}
+
+.tituloLista {
+font-weight: 700;
+margin-top: 1.1rem;
+}
+
+.containerServico3e4 ul, .containerServico5e6 ul{
+font-weight: normal;
+margin-top: 1rem;
+}
+
+.containerServico3e4 li {
+margin-right: 5rem;
+}
+
+.servico4 {
+margin-top: 3rem;
+}
+
+.textoDiv {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin: auto;
+}
+
+.textoDiv::before,
+.textoDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 10px;
+  width: calc(50% - 1.5rem);
+  background: url("../img/index/divtexto.webp") center / cover no-repeat;
+  filter:
+    invert(2%)
+    sepia(20%)
+    hue-rotate(1deg)
+    brightness(85%)
+    contrast(310%)
+    saturate(150%);
+  pointer-events: none;
+}
+
+.textoDiv::before {
+  right: 1rem;
+}
+
+.textoDiv::after {
+  left: 1rem;
+  transform: scaleX(-1);
+}
+
+
+/* LOGOS PRODUTOS*/
+.containerLogos {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+.fotoservico4 {
+display: block;
+object-fit: contain;
+height: 75px;
+border-radius: 14px;
+background: #ffffffcf;
+box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+transition: transform .35s ease;
+}
+
+.fotoservico4:hover {
+transform: scale(1.1);
+}
+
+
+/* ============================
+TÍTULOS
+============================= */
+h4, h5 {
+text-align: center;
+font-family: 'Nunito', sans-serif;
+font-weight: 600;
+}
+
+h4 {
+margin: 1rem 0;
+font-size: 1.6rem;
+}
+
+h5 {
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+
+/* ======== TABLET / LAPTOP ======== */
+@media (min-width: 822px) and 
+       (max-width: 991px) {
+
+}
+
+
+/* ======== TABLET ======== */
+@media (min-width: 769px) and 
+       (max-width: 821px) {
+
+  .containerServico3e4, .containerServico5e6 {
+    width: 100%;
+    columns: 2;
+    gap: 10px;
+  }
+
+  .textoDiv {
+    padding: 0.5rem;
+  }
+
+  .textoDiv::before, .textoDiv::after {
+    display: none;
+  }
+}
+
+
+/* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
+@media (min-width: 501px) and 
+        (max-width: 768px) {
+
+  .containerServico3e4, .containerServico5e6 {
+    text-align: center;
+  }
+
+  .chamadaCrepe p { font-size: 1rem; }
+
+  .containerServico3e4 h4, .containerServico5e6 h5 {
+    font-size: 1.2rem;
+  }
+
+  .nossoservico3, .nossoservico4,
+  .nossoservico5, .nossoservico6 {
+    padding: 1rem; 
+    letter-spacing: 1px;
+  }
+
+  .nossoservico3 p, .nossoservico4 p,
+  .nossoservico5 p, .nossoservico6 p {
+    font-size: 15px;
+  }
+
+  .servico1, .servico2, .servico3,
+  .servico4, .servico5 {
+    font-size: 15px;
+  }
+
+  .servico3 ul, .servico4 li,
+  .servico5 li {
+    align-items: left;
+    text-align: left;
+  }
+
+  .fotoservico4 {height: 60px;}
+
+  .textoDiv {
+    padding: 0.5rem;
+  }
+
+  .textoDiv::before, .textoDiv::after {
+    display: none;
+  }
+}
+
+
+/* ======== MOBILE PEQUENO ======== */
+@media screen and (max-width: 500px) {
+
+  .containerLogos {gap: 0.75rem;}
+
+  .fotoservico4 {height: 54px;}
+
+  .tituloLista {font-size: 1.05rem;}
+
+  h3 {font-size: 1.6rem;}
+
+  .textoDiv {
+    padding: 0.5rem;
+  }
+
+  .textoDiv::before, .textoDiv::after {
+    display: none;
+  }
+
+  .img-fluid-eventos {
+    max-width: 80px;
+  }
+}

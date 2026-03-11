@@ -1,0 +1,314 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: indexMedia.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 04/12/2025
+
+=========================================================== */
+
+
+/* ===========================================================
+SLIDE DE FOTOS
+=========================================================== */
+.sliderVideobloco {
+margin-top: 1rem;
+box-sizing: border-box;
+}
+
+.slideContainer, .instaContainer {
+width: 100%;
+}
+
+.fotoSlideBox {
+width: 580px;
+height: 210px;
+object-fit: cover;
+object-position: center;
+border-radius: 5px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+
+/* ===========================================================
+INSTAGRAM
+=========================================================== */
+.instaContainer {
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+gap: 1rem;
+}
+
+.instaWrapper {
+overflow: hidden;
+width: 100% !important;
+height: 50% !important;
+max-width: 270px !important;
+min-height: 580px !important;
+margin: 0 !important;
+}
+
+.instagram-media {
+width: 100% !important;
+max-width: 380px !important;
+min-width: 0 !important;
+}
+
+/* ===========================================================
+ICON CREPE
+=========================================================== */
+
+.displayImgCrepe{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3rem;
+}
+
+.fotoCrepeExem {
+width: calc(50% - 1.5rem) !important;
+height: auto;
+max-width: 180px;
+margin: 0;
+border-radius: 50px;
+}
+
+.fotoCrepeExem2 {
+width: calc(50% - 1.5rem) !important;
+height: auto;
+max-width: 180px;
+margin: 0;
+border-radius: 50px;
+}
+
+
+/* ===========================================================
+MAPA
+=========================================================== */
+.mapa iframe {
+border: 0;
+}
+
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+
+/* ======== TABLET / LAPTOP ======== */
+@media (min-width: 822px) and 
+       (max-width: 991px) {
+
+    .instaContainer {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .instaWrapper {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .displayImgCrepe {
+        justify-content: center;
+    }
+
+    .fotoSlideBox {
+        max-width: 480px !important;
+    }
+}
+
+
+/* ======== TABLET ======== */
+@media (min-width: 769px) and 
+       (max-width: 821px) {
+    
+    .displayImgCrepe {
+        display: none;
+    }
+
+    .instaContainer {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .instaWrapper {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+/* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
+@media (min-width: 501px) and 
+       (max-width: 768px) {
+
+    .instaContainer {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .instaWrapper {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .displayImgCrepe {
+        display: none;
+    }
+
+    .fotoSlideBox {
+        max-height: 120px !important;
+    }
+}
+
+
+/* ======== MOBILE PEQUENO ======== */
+@media screen and (max-width: 500px) {
+
+    .displayImgCrepe {
+        display: none !important;
+    }
+
+    .instaContainer {
+        float: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .instaWrapper {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .fotoSlideBox {
+        max-height: 120px !important;
+    }
+}
+
+
+
+
+
+
+/* ======== DESKTOP GRANDE → 1400px+ ======== 
+@media (min-width: 1400px) {
+
+    .fotoSlideBox {
+        width: 680px;
+        height: 230px;
+    }
+
+    .instaWrapper {
+        max-width: 300px;
+        max-height: 420px !important;
+    }
+}
+
+
+======== DESKTOP PADRÃO → 1200px até 1399px ======== 
+@media (max-width: 1399px) and (min-width: 1200px) {
+
+    .fotoSlideBox {
+        width: 600px;
+        height: 220px;
+    }
+
+    .instaWrapper {
+        max-width: 260px;
+    }
+}
+
+
+ ======== NOTEBOOK → 992px até 1199px ======== 
+@media (max-width: 1199px) and (min-width: 992px) {
+
+    .fotoSlideBox {
+        width: 520px;
+        height: 200px;
+    }
+
+    .instaWrapper {
+        max-width: 250px;
+    }
+}
+
+
+ ======== TABLET → 768px até 991px ========
+@media (max-width: 991px) and (min-width: 768px) {
+
+    .instaContainer {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .instaWrapper {
+        width: 50%;
+        max-width: 220px;
+    }
+
+    .instagram-media {
+        max-height: 460px !important;
+    }
+
+    .fotoSlideBox {
+        width: 480px;
+        height: 190px;
+    }
+
+    .displayImgCrepe {
+        justify-content: center;
+    }
+}
+
+
+ ======== MOBILE → 480px até 767px ======== 
+@media (max-width: 767px) and (min-width: 480px) {
+
+    .instaContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .instaWrapper {
+        max-width: 260px;
+    }
+
+    .instagram-media {
+        height: 530px !important;
+    }
+
+    .displayImgCrepe {
+        display: none;
+    }
+
+    .fotoSlideBox {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+    }
+}
+
+
+ ======== MOBILE PEQUENO → até 360px ======== 
+@media (max-width: 360px) {
+
+    .instaWrapper {
+        max-width: 240px;
+    }
+
+    .displayImgCrepe {
+        display: none;
+    }
+
+    .fotoSlideBox {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+}
+*/

@@ -1,0 +1,244 @@
+
+<!-- ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: form.html
+Descrição: Página contendo o formulário de orçamento, onde o usuário insere seus dados pessoais,
+           informações do evento e preferências de serviços antes de enviar para processamento.
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 29/10/2025
+
+=========================================================== -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de contato | Fraternité Crêpe </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script defer src="js/form.js"></script>
+    <script defer src="js/mainMenu.js"></script>
+    <link rel="stylesheet" href="css/mainMenu.css">
+    <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <img id="logoMenu" src="img/Logo_Fraternite_Crepe.png" alt="Fraternité Crêpe" class="img-fluid">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="picsPage.html">Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nossa Missão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">História do Crepe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Orçamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="php/login.php">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5">
+    <div class="text-center">
+        <h1>Formulario de Orçamento</h1>
+        <p>Por favor preencha este formulário com as informações necessárias</p>
+    </div>
+
+    <form id="formOrcamento" method="get" action="formAction.html" class="mx-auto">
+        <div class="legend">
+            <legend><strong>Dados Pessoais</strong></legend>
+        </div>
+
+        <fieldset class="row g-3">
+            <div class="col-md-6">
+                <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                <input name="nome" id="nome" type="text" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="sobrenome" class="form-label"><strong>Sobrenome:</strong></label>
+                <input name="sobrenome" id="sobrenome" type="text" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="email" class="form-label"><strong>E-mail:</strong></label>
+                <input name="email" id="email" type="email" class="form-control" required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="telefone" class="form-label"><strong>Contato:</strong></label>
+                <input name="telefone" type="text" id="telefone" class="form-control"
+                    placeholder="(XX) XXXXX-XXXX" maxlength="15" oninput="formatarTelefone(this)" />
+            </div>
+
+            <div class="col-4 col-md-3">
+                <label for="idade" class="form-label"><strong>Idade:</strong></label>
+                <input name="idade" id="idade" type="number" min="18" max="120" class="form-control idade" />
+            </div>
+        </fieldset>
+
+        <div class="legend">
+            <legend><strong>Selecione o Cardápio</strong></legend>
+        </div>
+
+        <fieldset>
+            <div class="cardapios d-flex flex-wrap justify-content-center gap-3">
+                <label><input id="marselha" type="radio" name="cardapio" value="Marselha" class="inline" checked /> Marselha</label>
+                <label><input id="premier" type="radio" name="cardapio" value="Premier" class="inline" /> Premier</label>
+                <label><input id="paris" type="radio" name="cardapio" value="Paris" class="inline" /> Paris</label>
+                <label><input id="leGrand" type="radio" name="cardapio" value="Le Grand" class="inline" /> Le Grand</label>
+            </div>
+        </fieldset>
+
+        <div class="legend">
+            <legend><strong>Informações do Evento</strong></legend>
+        </div>
+
+        <fieldset class="row g-3">
+            <div class="col-12 endereco">
+                <label class="form-label"><strong>Endereço:</strong></label>
+                <input type="text" id="cep" name="cep" class="form-control cep" placeholder="CEP 00000-000" maxlength="8" pattern="\d{8}" required>
+                <input type="text" id="rua" name="rua" class="form-control rua mt-3" placeholder="Rua" readonly>
+                <input type="text" id="numeroCasa" name="numeroCasa" class="form-control numeroCasa mt-3" placeholder="Número da residência" required>
+                <input type="text" id="bairro" name="bairro" class="form-control bairro mt-3" placeholder="Bairro" readonly>
+                <input type="text" id="cidade" name="cidade" class="form-control cidade mt-3" placeholder="Cidade" readonly>
+                <input type="text" id="estado" name="estado" class="form-control estado mt-3" placeholder="Estado" readonly>
+            </div>
+
+            <div class="col-md-6">
+                <label for="data" class="form-label"><strong>Data:</strong></label>
+                <input type="date" id="data" name="data" class="form-control" required>
+            </div>
+
+            <div class="col-md-3">
+                <label for="adultos" class="form-label"><strong>Adultos:</strong></label>
+                <input name="adultos" id="adultos" class="form-control adultos" maxlength="3" required />
+            </div>
+
+            <div class="col-md-3">
+                <label for="criancas" class="form-label"><strong>Crianças:</strong></label>
+                <input name="criancas" id="criancas" class="form-control criancas" maxlength="3" required />
+            </div>
+        </fieldset>
+
+         <div class="legend">
+            <legend><strong>Informações do Evento</strong></legend>
+        </div>
+
+        <fieldset>
+            <div class="servicos mt-3">
+                <div class="selector-row d-flex justify-content-between">
+                    <label>Incluir serviço de garçom?</label>
+                    <select name="garcom" id="garcom" class="form-select selector" required>
+                        <option value=""></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="selector-row d-flex justify-content-between">
+                    <label>Incluir serviço de pratos e copos?</label>
+                    <select name="pratos" id="pratos" class="form-select selector" required>
+                        <option value=""></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="selector-row d-flex justify-content-between">
+                    <label>Incluir serviço de copeira?</label>
+                    <select name="copeira" id="copeira" class="form-select selector" required>
+                        <option value=""></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="mt-4">
+            <label for="bio" class="form-label"><strong>Informações adicionais:</strong></label>
+            <textarea name="bio" id="bio" class="form-control" rows="3" placeholder="Meu evento é um aniversário e..."></textarea>
+        </div>
+
+        <fieldset class="mt-4">
+            <label class="form-label"><strong>Como você ouviu falar de nós?</strong></label>
+            <select name="referencia" id="referencia" class="form-select referencia">
+                <option value="">(Selecione)</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Google">Google</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </fieldset>
+
+        <div class="form-check container mt-4">
+            <input type="checkbox" class="form-check-input" id="terms_and_conditions" required>
+            <label class="form-check-label" for="terms_and_conditions">
+                Eu concordo com os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
+            </label>
+        </div>
+
+        <div class="text-center mt-4">
+            <input type="submit" value="Enviar" class="btn btn-light px-4 py-2">
+        </div>
+    </form>
+</main>
+
+<div class="iconWhatsApp">
+    <a href="https://wa.me/5541991319322" target="_blank">
+        <img src="img/logos/whatsappLogo.png" alt="WhatsApp">
+    </a>
+</div>
+
+<footer class="rodape">
+    <div class="container">
+
+        <div class="footer-linha">
+
+            <div class="redesocial">
+                <a href="https://www.instagram.com/fraternitecrepe/" target="_blank">
+                    <img src="img/logos/instagramLogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/Fraternitecrepecuritiba" target="_blank">
+                    <img src="img/logos/facebookLogo.png" alt="Facebook">
+                </a>
+            </div>
+
+            <div class="footer-centro">
+                <div class="footer-texto">
+                    <p>Copyright 2022 © Fraternité Crêpe</p>
+                </div>
+
+                <div class="pagamentos">
+                    <img class="visa" src="img/logos/visaLogo.png" alt="Visa">
+                    <img class="master" src="img/logos/mastercardLogo.png" alt="Mastercard">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: indexResposivo.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 04/02/2026
+
+=========================================================== */
+
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+
+/* ======== DESKTOP ======== */
+@media (min-width: 1200px) {
+
+    .textoContainer {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+}
+
+
+/* ======== DESKTOP / LAPTOP ======== */
+@media (min-width: 992px) and 
+       (max-width: 1199px) {
+
+    .textoContainer {
+        column-count: 2;
+        column-gap: 3rem;
+    }
+
+    .fieldservico {
+        padding: 0;
+    }
+}
+
+
+/* ======== TABLET / LAPTOP ======== */
+@media (min-width: 822px) and 
+       (max-width: 991px) {
+
+    .fieldservico {
+        padding: 0;
+    }
+
+    .textoContainer {
+        column-count: 2;
+        column-gap: 2rem;
+        padding: 0 0.25rem;
+    }
+
+    .fotoInicio {
+        margin: 1rem;
+    }
+}
+
+
+/* ======== TABLET ======== */
+@media (min-width: 767px) and 
+       (max-width: 821px) {
+
+    .fieldservico { 
+        padding: 1rem;
+    }
+
+    .textoContainer {
+        padding: 0 0.25rem;
+    }
+
+    .fotoInicio {
+        margin: 1.5rem;
+    }
+
+    .tituloFazer {
+        text-align: center !important;
+        letter-spacing: 2px;
+        font-size: 0.95rem;
+    }
+
+    .textoInfo p {
+        text-align: center;
+        font-size: 1.3rem !important;
+        padding: 0 1rem;
+    }
+
+}
+
+
+/* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
+@media (min-width: 501px) and 
+       (max-width: 768px) {
+
+    .fieldservico { 
+        padding: 0.5rem;
+    }
+
+    .holder {
+        gap: 1rem;
+        padding: 0rem;
+    }
+
+    .imagem img { 
+        max-width: 100%; 
+    }
+
+    .containerArea {
+        flex-direction: column;
+        margin: 0;
+        padding: 0rem;
+        font-size: 1rem;
+    }
+
+    .EnvieEmail {
+        width: 40%;
+        font-size: 15px;
+        height: auto;
+    }
+
+    .mapa iframe {width: 30%; height: auto;}
+
+    .fotoInicio {
+        margin: 0 0 1rem 0;
+    }
+
+    .text-center {
+        letter-spacing: 1px;
+        font-size: 1.95rem;
+    }
+
+    .tituloFazer {
+        text-align: center !important;
+        letter-spacing: 2px;
+        font-size: 0.95rem;
+    }
+
+    .textoInfo p {
+        text-align: left;
+        font-size: 1.3rem !important;
+        padding: 0 1rem;
+    }
+
+    .contatosFale h6 {
+        font-size: 18px;
+    }
+
+    .contatosFale p {
+        font-size: 17px;
+        line-height: 4px;
+    }
+}
+
+
+/* ======== MOBILE PEQUENO ======== */
+@media screen and (max-width: 500px) {
+
+    .fieldservico {
+        padding: 0.5rem;
+    }
+    .holder { gap: 1rem; }
+
+    .imagem img {width: 60% !important;}
+
+    h3 {font-size: 1.6rem !important;}
+
+    .fotoInicio {
+        margin: 1rem 0 2rem 0;
+        max-width: 100px;
+    }
+
+    .textoInfo p {
+        text-align: left;
+        font-size: 1.3rem !important;
+        padding: 0 1rem;
+    }
+
+    .tituloFazer {
+        text-align: center !important;
+        letter-spacing: 2px;
+        font-size: 0.95rem;
+    }
+
+    .contatosFale h6 {
+        font-size: 16px;
+    }
+
+    .contatosFale p {
+        font-size: 15px;
+        line-height: 4px;
+    }
+}
+
+
+/* ======== MOBILE MUITO PEQUENO ======== */
+@media screen and (max-width: 358px) {
+
+    .fieldservico {
+        padding: 0 !important;
+    }
+
+    .fotoInicio {
+        float: none;
+        display: block;
+        margin: 0 auto 0.5rem auto;
+        width: 100%;
+        max-width: 90px;
+    }
+
+    .fotoTexto {
+        text-align: center;
+    }
+
+    .textoInfo p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .tituloFazer {
+        text-align: center !important;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+}

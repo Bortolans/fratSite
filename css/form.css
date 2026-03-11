@@ -1,0 +1,297 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: form.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 27/11/2025
+
+=========================================================== */
+
+
+/* ===========================================================
+ESTILOS GERAIS
+=========================================================== */
+html, body {
+color: #000000;
+font-family: 'Nunito', sans-serif;
+font-style: normal;
+max-width: 100%;
+overflow-x: hidden;
+}
+
+h1, p {
+margin-top: 1em;
+text-align: center;
+}
+
+h1 {
+margin-top: 1rem;
+font-size: 2.7rem;
+}
+
+.servicos label {
+line-height: 0px;
+}
+
+.text-center p {
+font-size: 20px;
+padding: 10px;
+}
+
+
+/* ===========================================================
+LEGENDA
+=========================================================== */
+.legend {
+margin-top: 1rem;
+text-align: center;
+padding: 1px;
+font-size: 19px;
+}
+
+
+/* ===========================================================
+FORMULÁRIO (container geral)
+=========================================================== */
+form {
+max-width: 500px;
+width: 100%;
+margin: 0 auto;
+padding-bottom: 2em;
+}
+
+fieldset {
+border: none;
+padding: 2rem 0;
+border-bottom: 1px solid rgba(255, 0, 0, 0.582);
+display: block;
+width: 100%;
+text-align: center;
+}
+
+fieldset:last-of-type {
+border-bottom: none;
+}
+
+
+/* ===========================================================
+CAMPOS DE ENTRADA
+=========================================================== */
+input,
+textarea,
+select {
+width: 100%;
+border-radius: 10px;
+font-size: 15px;
+border: 1px solid rgba(73, 72, 72, 0.5) !important;
+margin-top: 6px;
+}
+
+input {
+color: #211f1f;
+}
+
+.idade {
+max-width: 80px;
+text-align: center;
+}
+
+
+/* ===========================================================
+SEÇÃO DE CARDÁPIOS
+=========================================================== */
+.cardapios {
+width: 100%;
+max-width: 400px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+margin: 0 auto;
+}
+
+.cardapios label {
+display: inline-flex;
+align-items: center;
+gap: 5px;
+white-space: nowrap;
+padding: 1px 1px;
+}
+
+.cardapios input[type="radio"] {
+margin: 0 !important;
+}
+
+.inline {
+width: unset;
+margin: 0;
+vertical-align: middle;
+}
+
+
+/* ===========================================================
+INFORMAÇÕES DO EVENTO
+=========================================================== */
+.infoevento {
+display: flex;
+gap: 16px;
+}
+
+.infoevento label {
+flex: 1;
+}
+
+.endereco input {
+background-color: #f2f2f7;
+}
+
+textarea {
+margin-top: 20px;
+background-color: #f2f2f7;
+color: #211f1f;
+}
+
+.adultos,
+.criancas {
+max-width: 90px;
+text-align: center;
+font-size: smaller;
+}
+
+
+/* ===========================================================
+SERVIÇOS ADICIONAIS
+=========================================================== */
+.servicos {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin: 20px 0;
+}
+
+.selector-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.selector-row label {
+font-size: 16px;
+font-weight: bold;
+}
+
+.selector {
+width: 110px;
+padding: 3px;
+font-size: 14px;
+}
+
+input[type="date"] {
+width: 60%;
+}
+
+
+/* ===========================================================
+REFERÊNCIA (Como ouviu falar)
+=========================================================== */
+.referencia {
+border: 1px solid rgba(0, 0, 0, 0.500);
+color: rgba(0, 0, 0, 0.700);
+}
+
+
+/* ===========================================================
+CHECKBOX TERMOS
+=========================================================== */
+.form-check, .checkbox {
+display: flex;
+width: 100%;
+justify-content: center;
+text-align: center;
+gap: 2rem;
+}
+
+
+/* ===========================================================
+BOTÃO ENVIAR
+=========================================================== */
+input[type="submit"] {
+display: block;
+margin: 3vw auto;
+width: 30%;
+min-width: 130px;
+padding: 10px;
+color: #000000;
+background-color: rgb(224, 221, 221);
+border: 1px solid rgba(0, 0, 0, 0.267);
+font-size: 17px;
+cursor: pointer;
+transition: background-color 0.1s ease, transform 0.1s ease;
+border-radius: 8px;
+}
+
+input[type="submit"]:hover {
+background-color: rgb(196, 194, 194);
+}
+
+
+/* ===========================================================
+LINKS INLINE
+=========================================================== */
+a {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+@media (min-width: 768px) {
+form {
+max-width: 650px;
+}
+
+.cardapios {
+max-width: 500px;
+}
+
+.selector-row {
+gap: 2rem;
+}
+
+input[type="date"] {
+width: 70%;
+}
+}
+
+
+@media (min-width: 992px) {
+form {
+max-width: 500px;
+}
+
+fieldset {
+text-align: left;
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.cardapios {
+justify-content: flex-start;
+max-width: 600px;
+}
+
+.selector-row {
+justify-content: space-between;
+gap: 5rem;
+}
+
+input[type="submit"] {
+width: 250px;
+}
+}

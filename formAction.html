@@ -1,0 +1,140 @@
+
+<!-- ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: formAction.html
+Descrição: Página de confirmação que exibe ao usuário os dados enviados pelo 
+           formulário e oferece opções para voltar ao formulário ou confirmar o envio.
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 08/11/2025
+
+=========================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmação do envio de formulário da Fraternité Crêpe">
+    <title>Confirmar Dados | Fraternité Crêpe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script defer src="js/formAction.js"></script>
+    <script defer src="js/mainMenu.js"></script>
+    <link rel="stylesheet" href="css/mainMenu.css">
+    <link rel="stylesheet" href="css/formAction.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <img id="logoMenu" src="img/Logo_Fraternite_Crepe.png" alt="Fraternité Crêpe" class="img-fluid">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="picsPage.html">Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nossa Missão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">História do Crepe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Orçamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="php/login.php">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container py-5">
+    <h1 class="text-center mb-3">Confirmar Dados</h1>
+    <p class="text-center mb-4">Revise as informações abaixo antes de confirmar.</p>
+    
+    <section>
+        <div id="formEnviado" class="text-center">
+            <div id="voltarEnviar" class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="form.html" class="btn btn-outline-secondary">Voltar e Corrigir</a>
+                <button type="button" class="btn btn-secondary" onclick="submitForm()">Confirmar e Enviar</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulário invisível que será enviado via POST para o PHP -->
+    <form id="formularioConfirmado" action="php/submit_form.php" method="POST">
+        <input type="hidden" name="nome" id="nome" value="">
+        <input type="hidden" name="sobrenome" id="sobrenome" value="">
+        <input type="hidden" name="telefone" id="telefone" value="">
+        <input type="hidden" name="email" id="email" value="">
+        <input type="hidden" name="idade" id="idade" value="">
+        <input type="hidden" name="cardapio" id="cardapio" value="">
+        <input type="hidden" name="cep" id="cep" value="">
+        <input type="hidden" name="rua" id="rua" value="">
+        <input type="hidden" name="numeroCasa" id="numeroCasa" value="">
+        <input type="hidden" name="bairro" id="bairro" value="">
+        <input type="hidden" name="cidade" id="cidade" value="">
+        <input type="hidden" name="estado" id="estado" value="">
+        <input type="hidden" name="data" id="data" value="">
+        <input type="hidden" name="adultos" id="adultos" value="">
+        <input type="hidden" name="criancas" id="criancas" value="">
+        <input type="hidden" name="garcom" id="garcom" value="">
+        <input type="hidden" name="pratos" id="pratos" value="">
+        <input type="hidden" name="copeira" id="copeira" value="">
+        <input type="hidden" name="bio" id="bio" value="">
+        <input type="hidden" name="referencia" id="referencia" value="">
+        <input type="hidden" name="terms_and_conditions" id="terms_and_conditions" value="">
+    </form>
+</main>
+
+
+<div class="iconWhatsApp">
+    <a href="https://wa.me/5541991319322" target="_blank">
+        <img src="img/logos/whatsappLogo.png" alt="WhatsApp">
+    </a>
+</div>
+
+<footer class="rodape">
+    <div class="container">
+
+        <div class="footer-linha">
+
+            <div class="redesocial">
+                <a href="https://www.instagram.com/fraternitecrepe/" target="_blank">
+                    <img src="img/logos/instagramLogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/Fraternitecrepecuritiba" target="_blank">
+                    <img src="img/logos/facebookLogo.png" alt="Facebook">
+                </a>
+            </div>
+
+            <div class="footer-centro">
+                <div class="footer-texto">
+                    <p>Copyright 2022 © Fraternité Crêpe</p>
+                </div>
+
+                <div class="pagamentos">
+                    <img class="visa" src="img/logos/visaLogo.png" alt="Visa">
+                    <img class="master" src="img/logos/mastercardLogo.png" alt="Mastercard">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,124 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: sucesso.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 29/11/2025
+
+=========================================================== */
+
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-30); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* ===========================================================
+ESTILO GERAL
+=========================================================== */
+html, body {
+  background: #ffffff !important;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 726px;
+  height: 100%;
+  background: linear-gradient(to left, #ffffff, #f76a6a, #106bf3), 
+              url(../img/bastille-day-fireworks-celebration-vector-15440995.avif)
+              left center / contain no-repeat;
+  background-blend-mode: overlay;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1%;
+  width: 486px;
+  height: 100%;
+  background: url(../img/Y2Yy1lZDgyOTQzMzQ1ZThfMi5qcGc.webp)
+              right center / contain no-repeat;
+  background-blend-mode: overlay;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Faz o main ocupar todo o espaço disponível entre header e footer */
+.layout {
+  position: relative;
+  flex: 1;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+main a.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+}
+
+h1 {
+  color: #10264e;
+  padding: 2rem;
+}
+
+.layout p {
+  color: rgb(40, 40, 40);
+  font-size: 23px;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+a.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 5rem;
+  background-color: #0000002d;
+}
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+@media (max-width: 768px), (max-width: 1080px) {
+
+  .layout {
+    padding: 0 !important;
+  }
+
+  body::before,
+  body::after {
+    display: none !important;
+    padding: 0 !important;
+  }
+}

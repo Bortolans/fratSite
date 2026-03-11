@@ -1,0 +1,454 @@
+
+/* ===========================================================
+
+Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: mainMenu.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 30/11/2025
+
+=========================================================== */
+
+/* ===========================================================
+RESET / BASE GLOBAL
+=========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #ffffff,
+    #f9080868
+  );
+}
+
+/* ===========================================================
+LAYOUT BASE
+=========================================================== */
+.navbar > .container-fluid {
+  display: flex;
+  align-items: center;
+  text-align: center !important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* ===========================================================
+HEADER / MENU
+=========================================================== */
+header .navbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #3f0000 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  font-family: 'Nunito', sans-serif;
+}
+
+.navbar-brand {
+  margin-left: clamp(10rem, 10vw, 5rem);
+}
+
+.navbar-brand img {
+  width: 100%;
+  max-width: 165px;
+  border: 1px solid rgba(98,98,98,.675);
+  border-radius: 10px;
+  box-shadow: 1px 10px 30px #000000;
+
+  filter:
+  invert(15%)
+  sepia(60%)
+  saturate(80%)
+  hue-rotate(15deg)
+  brightness(95%)
+  contrast(355%) !important;
+}
+
+/* Links */
+.navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fa4032 !important;
+}
+
+.navbar-toggler {
+  border: none;
+  position: absolute;
+  right: 1rem;
+}
+
+
+/* ===========================================================
+RODAPÉ
+=========================================================== */
+
+.rodape {
+  background-color: #010729;
+  color: #f5eeee;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.footer-linha {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+}
+
+/* redes sociais */
+.redesocial {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.redesocial img {
+  max-width: 30px;
+}
+
+/* bloco central */
+.footer-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+/* texto */
+.footer-texto {
+  font-size: 10px;
+  margin-bottom: 1px;
+}
+
+/* pagamentos */
+.pagamentos {
+  display: flex;
+  gap: 15px;
+}
+
+.pagamentos img {
+  max-width: 25px;
+}
+
+.visa{ width: 35px; }
+.master{ width: 40px; }
+
+
+/* ===========================================================
+BOTÃO WHATSAPP FIXO
+=========================================================== */
+.iconWhatsApp {
+  width: 100%;
+  max-width: 75px;
+  height: 75px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(29,233,77,.3);
+}
+
+.iconWhatsApp img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.iconWhatsApp:hover {
+  background-color: #87f78b;
+  transition: 400ms;
+  padding: 5px;
+}
+
+
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+/* === Desktop grande === */
+@media (min-width: 1200px) {}
+
+
+/* === Desktop / Laptop === */
+@media (min-width: 992px) and 
+       (max-width: 1199px) {
+
+  .navbar-brand { margin: 0 1.5rem; }
+
+}
+
+
+/* === Tablet / Laptop === */
+@media (min-width: 822px) and 
+       (max-width: 991px) {
+
+  #menuNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 90%;
+    max-width: 255px;
+    background: #000000e2;
+    padding-top: 5.9rem;
+    padding-bottom: 1rem;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 1050;
+    box-shadow: -10px 0 20px rgba(0,0,0,.35);
+    overflow-y: auto;
+  }
+
+  #menuNav.show { transform: translateX(0); }
+
+  #menuNav .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #menuNav .nav-item {
+    width: 70%;
+    max-width: 380px;
+    border-bottom: 1px solid rgba(255,255,255,.414);
+  }
+
+  #menuNav .nav-link {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  .navbar-brand { margin: 0 auto; }
+}
+
+
+/* === Tablet → Mobile grande === */
+@media (min-width: 501px) and 
+       (max-width: 821px) {
+
+  #menuNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 90%;
+    max-width: 255px;
+    background: #000000e2;
+    padding-top: 5.9rem;
+    padding-bottom: 1rem;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 1050;
+    box-shadow: -10px 0 20px rgba(0,0,0,.35);
+    overflow-y: auto;
+  }
+
+  #menuNav.show { transform: translateX(0); }
+
+  #menuNav .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #menuNav .nav-item {
+    width: 70%;
+    max-width: 380px;
+    border-bottom: 1px solid rgb(255,255,255);
+  }
+
+  #menuNav .nav-link {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  .navbar-brand { margin: 0 auto; }
+
+  .iconWhatsApp {
+    width: 80%;
+  }
+
+  .redesocial{
+    gap: 10px;
+  }
+
+  .pagamentos{
+    gap: 10px;
+  }
+
+  .redesocial img {
+    width: 25px;
+  }
+
+  .pagamentos img {
+    width: 25px;
+  }
+}
+
+
+/* === Mobile === */
+@media (max-width: 500px) {
+
+  #menuNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 80%;
+    max-width: 180px;
+    background: #000000e2;
+    padding-top: 5.9rem;
+    padding-bottom: 1rem;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    z-index: 1050;
+    box-shadow: -10px 0 20px rgba(0,0,0,.35);
+    overflow-y: auto;
+  }
+
+  #menuNav.show { transform: translateX(0); }
+
+  #menuNav .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #menuNav .nav-item {
+    width: 70%;
+    max-width: 380px;
+    border-bottom: 1px solid rgb(255,255,255);
+  }
+
+  #menuNav .nav-link {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  .navbar-brand { margin: 0 auto; }
+
+  .iconWhatsApp {
+    width: 60%;
+  }
+
+  .footer-linha {
+    margin-right: 2rem;
+  }
+
+  .redesocial{
+    gap: 8px;
+  }
+
+  .pagamentos{
+    gap: 8px;
+  }
+
+  .redesocial img {
+    width: 25px;
+  }
+
+  .pagamentos img {
+    width: 20px;
+  }
+}
+
+
+/* === Mobile muito pequeno === */
+@media (max-width: 380px) {
+
+  #menuNav {
+    width: 50%;
+    max-width: 180px;
+    padding-top: 6rem;
+  }
+
+  #menuNav .navbar-nav { gap: 0.6rem; }
+
+  #menuNav .nav-item { width: 80%; }
+
+  #menuNav .nav-link { font-size: 1rem; }
+
+  #menuNav .nav-item:hover { width: 95%; }
+
+  .navbar-toggler { right: 5px; }
+
+  .iconWhatsApp {
+    width: 50px;
+  }
+
+  .footer-linha {
+    margin-right: 1rem;
+  }
+
+  .redesocial{
+    gap: 8px;
+  }
+
+  .pagamentos{
+    gap: 8px;
+  }
+
+  .redesocial img {
+    width: 25px;
+  }
+
+  .pagamentos img {
+    width: 20px;
+  }
+}

@@ -1,0 +1,230 @@
+
+<!-- ===========================================================
+
+Projeto: Atividade Somativa 1 (Site para empresa de Catering Fraternité Crêpe)
+Nome do Arquivo: index.html
+Descrição: Página inicial do site que apresenta o conteúdo principal da empresa, incluindo navegação,
+           serviços, imagens, vídeos, informações de contato e links para outras seções.
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 20/10/2025
+
+=========================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Fraternité Crêpe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/mainMenu.js"></script>
+    <link rel="stylesheet" href="css/mainMenu.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/indexMedia.css">
+    <link rel="stylesheet" href="css/indexResponsivo.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <img id="logoMenu" src="img/Logo_Fraternite_Crepe.png" alt="Fraternité Crêpe" class="img-fluid">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="picsPage.html">Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nossa Missão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">História do Crepe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Orçamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="php/login.php">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container-fluid px-0">
+
+    <section class="holder row g-4 justify-content-center">
+        <div class="imagem col-12 col-sm-6 col-lg-4">
+            <h2>EVENTOS</h2>
+            <a href="eventsPage.html" target="_self" class="d-flex justify-content-center">
+                <img src="img/index/midiaFoto_9.jpg" alt="FotoEvento" class="img-fluid">
+            </a>
+        </div>
+        <div class="imagem col-12 col-sm-6 col-lg-4">
+            <h2>CARDÁPIOS</h2>
+            <a href="https://www.google.com" target="_self" class="d-flex justify-content-center">
+                <img src="img/index/midiaFoto_10.jpg" alt="FotoCardapios" class="img-fluid">
+            </a>
+        </div>
+        <div class="imagem col-12 col-sm-6 col-lg-4">
+            <h2>FOTOS</h2>
+            <a href="picsPage.html" target="_self" class="d-flex justify-content-center">
+                <img src="img/index/estruturaBuffetSlider_1.jpg" alt="FotoAlbum" class="img-fluid">
+            </a>
+        </div>
+    </section>
+
+    <div name="bordaInicio" class="bordaInicio"></div>
+
+    <section class="fieldservico animate__animated animate__fadeInUpBig">
+        <div class="containerArea px-3 px-md-4">
+            <h3 class="text-center">Excelência em Seu Evento</h3>
+
+            <section class="blocoTexto row g-3">
+
+                <div class="textoContainer col-12 col-lg-12 order-1">
+                    <div class="textoPrincipal1">
+                        <div class="textoInfo">
+                            <div class="fotoTexto">
+                                <img id="fotoservico1" name="fotoservico1"
+                                     class="fotoInicio img-fluid"
+                                     src="img/index/logoCut.webp"
+                                     alt="Foto Fraternité">
+                            </div>
+                            <p class="tituloFazer">Adoraríamos fazer parte da sua comemoração!</p>
+                            <p class="texto1">
+                                Nossa equipe se dedica com atenção a cada detalhe 
+                                todo momento do seu evento é cuidado com carinho, garantindo que cada instante se transforme 
+                                em uma experiência única, inesquecível e repleta de encanto para você e seus convidados.
+                            </p>
+
+                            <p class="texto1">
+                                O modelo de serviço da Fraternité Crêpe foi elaborado para que os convidados vejam os ingredientes 
+                                a serem escolhidos. Eles se dirigem à estrutura onde ficam as "sugestões do chefe", e nossos profissionais 
+                                preparam os crepes conforme o cardápio ou ao gosto de cada um.
+                                <br><br>
+                                É possível acompanhar nossos cozinheiros preparando tudo com cuidado, garantindo crepes quentinhos e crocantes.
+                                Esse serviço é perfeito! Caso deseje, podemos fornecer garçons para servir os convidados à mesa, tornando o evento 
+                                mais glamouroso. Aproveite bons momentos, boas conversas e saboreie um autêntico crepe francês!
+                            </p>
+                        </div>
+
+                        <div class="displayImgCrepe col-12 col-lg-12 order-5 order-lg-3">
+                            <img id="iconCrepe" name="iconCrepe"
+                                class="fotoCrepeExem img-fluid"
+                                src="img/index/crepe-filled-with-chocolate-strawberry-90283.avif" 
+                                alt="Figura Crepe">
+
+                            <img id="iconCrepe2" name="iconCrepe2"
+                                class="fotoCrepeExem2 img-fluid"
+                                src="img/index/crepe-meticulously-ham-green-parsley-3988255.avif" 
+                                alt="Figura Crepe">
+                        </div>
+                    </div>
+
+                    <div class="sliderVideobloco">
+                        <div class="row g-3">
+
+                            <div class="slideContainer col-12 col-lg-6 order-2">
+                                <div class="slideFoto d-flex justify-content-center">
+                                    <img id="fotoSlide" 
+                                         name="fotoSlide"
+                                         class="fotoSlideBox img-fluid"
+                                         src="img/"
+                                         alt="Slide Foto">
+                                </div>
+                            </div>
+
+                            <div class="instaContainer col-12 col-lg-12 order-3 order-lg-4">
+                                <div class="instaWrapper">
+                                    <blockquote 
+                                    class="instagram-media"
+                                    data-instgrm-permalink="https://www.instagram.com/reel/DQ_vV4hjhWG/"
+                                    data-instgrm-version="14">
+                                    </blockquote>
+                                </div>
+
+                                <div class="instaWrapper">
+                                    <blockquote 
+                                    class="instagram-media"
+                                    data-instgrm-permalink="https://www.instagram.com/p/CuCgCHaPAGi/"
+                                    data-instgrm-version="14">
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="contatosFale" class="contatosFale container px-3 px-md-4 mt-5">
+        <h6>FALE CONOSCO</h6>
+        <p>(41) 98483-4543</p>
+        <p>(41) 4106-8002</p>
+        <p>contato@fraternitecrepe.com.br</p>
+
+        <div class="d-flex justify-content-center">
+            <button class="EnvieEmail" id="EnvieEmail" onclick="window.location.href='form.html'">
+                Faça um orçamento
+            </button>
+        </div>
+
+        <div class="mapa mt-4 d-flex justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d115263.91514870718!2d-49.314816!3d-25.
+                        471764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce30586b82dc1%3A0x5030e9f3dc997e41!2sR.%20Alberto
+                        %20Klemtz%2C%201191%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2080330-380%2C%20Brasil!5e0!3m2!
+                        1spt-BR!2sus!4v1738436229943!5m2!1spt-BR!2sus"
+                    allowfullscreen loading="lazy" class="w-100" style="max-width:850px;height:250px;border:0;"></iframe>
+        </div>
+    </section>
+</main>
+
+<div class="iconWhatsApp">
+    <a href="https://wa.me/5541991319322" target="_blank">
+        <img src="img/logos/whatsappLogo.png" alt="WhatsApp">
+    </a>
+</div>
+
+<footer class="rodape">
+    <div class="container">
+
+        <div class="footer-linha">
+
+            <div class="redesocial">
+                <a href="https://www.instagram.com/fraternitecrepe/" target="_blank">
+                    <img src="img/logos/instagramLogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/Fraternitecrepecuritiba" target="_blank">
+                    <img src="img/logos/facebookLogo.png" alt="Facebook">
+                </a>
+            </div>
+
+            <div class="footer-centro">
+                <div class="footer-texto">
+                    <p>Copyright 2022 © Fraternité Crêpe</p>
+                </div>
+
+                <div class="pagamentos">
+                    <img class="visa" src="img/logos/visaLogo.png" alt="Visa">
+                    <img class="master" src="img/logos/mastercardLogo.png" alt="Mastercard">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
