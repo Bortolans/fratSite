@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: excluir.php
 Descrição: Exclui um cliente do banco de dados com base no ID recebido pela URL 
            e redireciona para a lista de clientes.

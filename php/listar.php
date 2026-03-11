@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: listar.php
 Descrição: Página que exibe em HTML a lista de clientes do banco de dados com opções de editar,
            excluir e adicionar novos, protegida para usuários logados.

@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: editar.php
 Descrição: Exibe um formulário HTML com os dados de um cliente já cadastrado para edição,
            permitindo alterar informações e enviar para editarAction.php.

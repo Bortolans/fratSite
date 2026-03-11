@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: inserir.php
 Descrição: Exibe um formulário em HTML para cadastrar um novo cliente, enviando os 
            dados para inserirAction.php.

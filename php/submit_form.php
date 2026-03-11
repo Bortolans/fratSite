@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: submit_form.php
 Descrição: Script PHP que processa o formulário final enviado a partir de formAction.html.
            Ele recebe os dados via método POST, insere os dados do cliente no banco de dados

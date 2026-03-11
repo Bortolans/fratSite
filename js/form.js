@@ -1,7 +1,7 @@
 
 /* ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: form.js
 Descrição: Script responsável pela interação com o formulário de orçamento.
            Ele captura os dados inseridos pelo usuário, realiza validações em campos como telefone,

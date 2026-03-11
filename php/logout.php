@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: logout.php
 Descrição: Encerra a sessão do usuário e o redireciona para a página de login.
 Autor: Thiago Bortolan de Oliveira

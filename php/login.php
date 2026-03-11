@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: login.php
 Descrição: Página de login com formulário em HTML que envia usuário e senha para validação,
            redireciona automaticamente usuários já logados para a página principal.

@@ -1,7 +1,7 @@
 
 /* ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: formAction.js
 Descrição: Script responsável por recuperar os dados armazenados no localStorage
            (salvos pelo form.js), montar dinamicamente uma tabela de confirmação para exibição

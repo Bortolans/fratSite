@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: editarAction.php
 Descrição: Atualiza os dados de um cliente no banco de dados com base no ID recebido 
            do formulário e redireciona para a lista de clientes.

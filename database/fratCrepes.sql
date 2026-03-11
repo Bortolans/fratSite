@@ -1,7 +1,7 @@
 
 /* ===========================================================
 
-Projeto: Atividade Somativa 2 (Site Fraternité Crêpe)
+Projeto: Site Fraternité Crêpe
 Arquivo: fratCrepes.sql
 Descrição: Script SQL responsável por criar as tabelas principais do banco de dados
            para a aplicação Fraternité Crêpe. Ele define a tabela 'cliente' para armazenar os

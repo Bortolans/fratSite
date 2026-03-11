@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: protecao.php
 Descrição: Protege a página, permitindo acesso apenas a usuários logados; 
            caso contrário, redireciona para o login.

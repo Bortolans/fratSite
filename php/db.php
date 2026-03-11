@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: db.php
 Descrição: Conecta o sistema ao banco de dados MySQL e verifica se a conexão foi bem-sucedida.
 Autor: Thiago Bortolan de Oliveira

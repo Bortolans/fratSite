@@ -1,7 +1,7 @@
 
 <!-- ===========================================================
 
-Projeto: Atividade Somativa 2 (Site para empresa de Catering Fraternité Crêpe)
+Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: loginAction.php
 Descrição: Valida o login do administrador, iniciando sessão se usuário 
            e senha estiverem corretos.
