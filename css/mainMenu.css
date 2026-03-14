@@ -11,9 +11,7 @@ Data Criação: 30/11/2025
 /* ===========================================================
 RESET / BASE GLOBAL
 =========================================================== */
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -166,12 +164,11 @@ RODAPÉ
 BOTÃO WHATSAPP FIXO
 =========================================================== */
 .iconWhatsApp {
-  width: 100%;
-  max-width: 75px;
-  height: 75px;
+  width: clamp(50px, 6vw, 75px);
+  height: clamp(50px, 6vw, 75px);
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 15px;
   border-radius: 100%;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(29,233,77,.3);
@@ -311,10 +308,6 @@ RESPONSIVIDADE
 
   .navbar-brand { margin: 0 auto; }
 
-  .iconWhatsApp {
-    width: 80%;
-  }
-
   .redesocial{
     gap: 10px;
   }
@@ -383,10 +376,6 @@ RESPONSIVIDADE
 
   .navbar-brand { margin: 0 auto; }
 
-  .iconWhatsApp {
-    width: 60%;
-  }
-
   .footer-linha {
     margin-right: 2rem;
   }
@@ -405,6 +394,10 @@ RESPONSIVIDADE
 
   .pagamentos img {
     width: 20px;
+  }
+
+  .iconWhatsApp {
+    right: 10px;
   }
 }
 
@@ -428,10 +421,6 @@ RESPONSIVIDADE
 
   .navbar-toggler { right: 5px; }
 
-  .iconWhatsApp {
-    width: 50px;
-  }
-
   .footer-linha {
     margin-right: 1rem;
   }
@@ -450,5 +439,9 @@ RESPONSIVIDADE
 
   .pagamentos img {
     width: 20px;
+  }
+
+    .iconWhatsApp {
+    right: 10px;
   }
 }
