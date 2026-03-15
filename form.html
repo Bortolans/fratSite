@@ -61,145 +61,147 @@ Data Criação: 29/10/2025
         <p>Por favor preencha este formulário com as informações necessárias</p>
     </div>
 
-    <form id="formOrcamento" method="get" action="formAction.html" class="mx-auto">
-        <div class="legend">
-            <legend><strong>Dados Pessoais</strong></legend>
-        </div>
-
-        <fieldset class="row g-3">
-            <div class="col-md-6">
-                <label for="nome" class="form-label"><strong>Nome:</strong></label>
-                <input name="nome" id="nome" type="text" class="form-control" required />
+    <section class="sectionForm">
+        <form id="formOrcamento" method="get" action="formAction.html" class="mx-auto">
+            <div class="legend">
+                <legend><strong>Dados Pessoais</strong></legend>
             </div>
 
-            <div class="col-md-6">
-                <label for="sobrenome" class="form-label"><strong>Sobrenome:</strong></label>
-                <input name="sobrenome" id="sobrenome" type="text" class="form-control" required />
-            </div>
-
-            <div class="col-md-6">
-                <label for="email" class="form-label"><strong>E-mail:</strong></label>
-                <input name="email" id="email" type="email" class="form-control" required />
-            </div>
-
-            <div class="col-md-6">
-                <label for="telefone" class="form-label"><strong>Contato:</strong></label>
-                <input name="telefone" type="text" id="telefone" class="form-control"
-                    placeholder="(XX) XXXXX-XXXX" maxlength="15" oninput="formatarTelefone(this)" />
-            </div>
-
-            <div class="col-4 col-md-3">
-                <label for="idade" class="form-label"><strong>Idade:</strong></label>
-                <input name="idade" id="idade" type="number" min="18" max="120" class="form-control idade" />
-            </div>
-        </fieldset>
-
-        <div class="legend">
-            <legend><strong>Selecione o Cardápio</strong></legend>
-        </div>
-
-        <fieldset>
-            <div class="cardapios d-flex flex-wrap justify-content-center gap-3">
-                <label><input id="marselha" type="radio" name="cardapio" value="Marselha" class="inline" checked /> Marselha</label>
-                <label><input id="premier" type="radio" name="cardapio" value="Premier" class="inline" /> Premier</label>
-                <label><input id="paris" type="radio" name="cardapio" value="Paris" class="inline" /> Paris</label>
-                <label><input id="leGrand" type="radio" name="cardapio" value="Le Grand" class="inline" /> Le Grand</label>
-            </div>
-        </fieldset>
-
-        <div class="legend">
-            <legend><strong>Informações do Evento</strong></legend>
-        </div>
-
-        <fieldset class="row g-3">
-            <div class="col-12 endereco">
-                <label class="form-label"><strong>Endereço:</strong></label>
-                <input type="text" id="cep" name="cep" class="form-control cep" placeholder="CEP 00000-000" maxlength="8" pattern="\d{8}" required>
-                <input type="text" id="rua" name="rua" class="form-control rua mt-3" placeholder="Rua" readonly>
-                <input type="text" id="numeroCasa" name="numeroCasa" class="form-control numeroCasa mt-3" placeholder="Número da residência" required>
-                <input type="text" id="bairro" name="bairro" class="form-control bairro mt-3" placeholder="Bairro" readonly>
-                <input type="text" id="cidade" name="cidade" class="form-control cidade mt-3" placeholder="Cidade" readonly>
-                <input type="text" id="estado" name="estado" class="form-control estado mt-3" placeholder="Estado" readonly>
-            </div>
-
-            <div class="col-md-6">
-                <label for="data" class="form-label"><strong>Data:</strong></label>
-                <input type="date" id="data" name="data" class="form-control" required>
-            </div>
-
-            <div class="col-md-3">
-                <label for="adultos" class="form-label"><strong>Adultos:</strong></label>
-                <input name="adultos" id="adultos" class="form-control adultos" maxlength="3" required />
-            </div>
-
-            <div class="col-md-3">
-                <label for="criancas" class="form-label"><strong>Crianças:</strong></label>
-                <input name="criancas" id="criancas" class="form-control criancas" maxlength="3" required />
-            </div>
-        </fieldset>
-
-         <div class="legend">
-            <legend><strong>Informações do Evento</strong></legend>
-        </div>
-
-        <fieldset>
-            <div class="servicos mt-3">
-                <div class="selector-row d-flex justify-content-between">
-                    <label>Incluir serviço de garçom?</label>
-                    <select name="garcom" id="garcom" class="form-select selector" required>
-                        <option value=""></option>
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
+            <fieldset class="row g-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                    <input name="nome" id="nome" type="text" class="form-control" required />
                 </div>
 
-                <div class="selector-row d-flex justify-content-between">
-                    <label>Incluir serviço de pratos e copos?</label>
-                    <select name="pratos" id="pratos" class="form-select selector" required>
-                        <option value=""></option>
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
+                <div class="col-md-6">
+                    <label for="sobrenome" class="form-label"><strong>Sobrenome:</strong></label>
+                    <input name="sobrenome" id="sobrenome" type="text" class="form-control" required />
                 </div>
 
-                <div class="selector-row d-flex justify-content-between">
-                    <label>Incluir serviço de copeira?</label>
-                    <select name="copeira" id="copeira" class="form-select selector" required>
-                        <option value=""></option>
-                        <option value="Sim">Sim</option>
-                        <option value="Não">Não</option>
-                    </select>
+                <div class="col-md-6">
+                    <label for="email" class="form-label"><strong>E-mail:</strong></label>
+                    <input name="email" id="email" type="email" class="form-control" required />
                 </div>
+
+                <div class="col-md-6">
+                    <label for="telefone" class="form-label"><strong>Contato:</strong></label>
+                    <input name="telefone" type="text" id="telefone" class="form-control"
+                        placeholder="(XX) XXXXX-XXXX" maxlength="15" oninput="formatarTelefone(this)" />
+                </div>
+
+                <div class="col-4 col-md-3">
+                    <label for="idade" class="form-label"><strong>Idade:</strong></label>
+                    <input name="idade" id="idade" type="number" min="18" max="120" class="form-control idade" />
+                </div>
+            </fieldset>
+
+            <div class="legend">
+                <legend><strong>Selecione o Cardápio</strong></legend>
             </div>
-        </fieldset>
 
-        <div class="mt-4">
-            <label for="bio" class="form-label"><strong>Informações adicionais:</strong></label>
-            <textarea name="bio" id="bio" class="form-control" rows="3" placeholder="Meu evento é um aniversário e..."></textarea>
-        </div>
+            <fieldset>
+                <div class="cardapios d-flex flex-wrap justify-content-center gap-3">
+                    <label><input id="marselha" type="radio" name="cardapio" value="Marselha" class="inline" checked /> Marselha</label>
+                    <label><input id="premier" type="radio" name="cardapio" value="Premier" class="inline" /> Premier</label>
+                    <label><input id="paris" type="radio" name="cardapio" value="Paris" class="inline" /> Paris</label>
+                    <label><input id="leGrand" type="radio" name="cardapio" value="Le Grand" class="inline" /> Le Grand</label>
+                </div>
+            </fieldset>
 
-        <fieldset class="mt-4">
-            <label class="form-label"><strong>Como você ouviu falar de nós?</strong></label>
-            <select name="referencia" id="referencia" class="form-select referencia">
-                <option value="">(Selecione)</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Google">Google</option>
-                <option value="Outros">Outros</option>
-            </select>
-        </fieldset>
+            <div class="legend">
+                <legend><strong>Informações do Evento</strong></legend>
+            </div>
 
-        <div class="form-check container mt-4">
-            <input type="checkbox" class="form-check-input" id="terms_and_conditions" required>
-            <label class="form-check-label" for="terms_and_conditions">
-                Eu concordo com os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
-            </label>
-        </div>
+            <fieldset class="row g-3">
+                <div class="col-12 endereco">
+                    <label class="form-label"><strong>Endereço:</strong></label>
+                    <input type="text" id="cep" name="cep" class="form-control cep" placeholder="CEP 00000-000" maxlength="8" pattern="\d{8}" required>
+                    <input type="text" id="rua" name="rua" class="form-control rua mt-3" placeholder="Rua" readonly>
+                    <input type="text" id="numeroCasa" name="numeroCasa" class="form-control numeroCasa mt-3" placeholder="Número da residência" required>
+                    <input type="text" id="bairro" name="bairro" class="form-control bairro mt-3" placeholder="Bairro" readonly>
+                    <input type="text" id="cidade" name="cidade" class="form-control cidade mt-3" placeholder="Cidade" readonly>
+                    <input type="text" id="estado" name="estado" class="form-control estado mt-3" placeholder="Estado" readonly>
+                </div>
 
-        <div class="text-center mt-4">
-            <input type="submit" value="Enviar" class="btn btn-light px-4 py-2">
-        </div>
-    </form>
+                <div class="col-md-6">
+                    <label for="data" class="form-label"><strong>Data:</strong></label>
+                    <input type="date" id="data" name="data" class="form-control" required>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="adultos" class="form-label"><strong>Adultos:</strong></label>
+                    <input name="adultos" id="adultos" class="form-control adultos" maxlength="3" required />
+                </div>
+
+                <div class="col-md-3">
+                    <label for="criancas" class="form-label"><strong>Crianças:</strong></label>
+                    <input name="criancas" id="criancas" class="form-control criancas" maxlength="3" required />
+                </div>
+            </fieldset>
+
+            <div class="legend">
+                <legend><strong>Informações do Evento</strong></legend>
+            </div>
+
+            <fieldset>
+                <div class="servicos mt-3">
+                    <div class="selector-row d-flex justify-content-between">
+                        <label>Incluir serviço de garçom?</label>
+                        <select name="garcom" id="garcom" class="form-select selector" required>
+                            <option value=""></option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-row d-flex justify-content-between">
+                        <label>Incluir serviço de pratos e copos?</label>
+                        <select name="pratos" id="pratos" class="form-select selector" required>
+                            <option value=""></option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-row d-flex justify-content-between">
+                        <label>Incluir serviço de copeira?</label>
+                        <select name="copeira" id="copeira" class="form-select selector" required>
+                            <option value=""></option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="mt-4">
+                <label for="bio" class="form-label"><strong>Informações adicionais:</strong></label>
+                <textarea name="bio" id="bio" class="form-control" rows="3" placeholder="Meu evento é um aniversário e..."></textarea>
+            </div>
+
+            <fieldset class="mt-4">
+                <label class="form-label"><strong>Como você ouviu falar de nós?</strong></label>
+                <select name="referencia" id="referencia" class="form-select referencia">
+                    <option value="">(Selecione)</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google">Google</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </fieldset>
+
+            <div class="form-check container mt-4">
+                <input type="checkbox" class="form-check-input" id="terms_and_conditions" required>
+                <label class="form-check-label" for="terms_and_conditions">
+                    Eu concordo com os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
+                </label>
+            </div>
+
+            <div class="text-center mt-4">
+                <input type="submit" value="Enviar" class="btn btn-light px-4 py-2">
+            </div>
+        </form>
+    </section>
 </main>
 
 <div class="iconWhatsApp">

@@ -54,11 +54,18 @@ font-size: 19px;
 /* ===========================================================
 FORMULÁRIO (container geral)
 =========================================================== */
+.sectionForm {
+max-width: 800px;
+background: white;
+margin: 0 auto;
+margin-bottom: 2rem;
+border-radius: 5px;
+}
+
 form {
-max-width: 500px;
 width: 100%;
 margin: 0 auto;
-padding-bottom: 2em;
+padding-bottom: 2rem;
 }
 
 fieldset {
