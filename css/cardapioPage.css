@@ -7,3 +7,106 @@ Autor: Thiago Bortolan de Oliveira
 
 =========================================================== */
 
+html, body {
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+
+/* ===========================================================
+MENU SECTION
+=========================================================== */
+.menu-section {
+    width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 2rem;
+    will-change: transform, opacity;
+    animation-duration: 1s;
+}
+
+
+/* container interno */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ===========================================================
+TÍTULO PRINCIPAL / DESCRIÇÃO DO CARDÁPIO
+=========================================================== */
+h1 {
+    font-size: 2rem;
+    font-weight: 530;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.menu-description {
+    margin: 30px auto 40px auto;
+    max-width: 1900px;
+    text-align: left;
+}
+
+.menu-description p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #2c2c2c;
+}
+
+
+/* ===========================================================
+GRID DOS CARDÁPIOS
+========================================================== */
+.menu-cards {
+    max-width: 1420px;
+    margin-top: 5px;
+    padding: 1rem;
+    gap: 5rem;
+    will-change: transform, opacity;
+    animation: bounceInLeft 650ms ease-in;
+}
+
+
+/* ===========================================================
+CARD INDIVIDUAL
+=========================================================== */
+.menu-card {
+    text-align: center;
+    max-width: 420px;
+}
+
+/* imagem */
+.menu-card img,
+.menu-card .img-fluid {
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid rgba(198,198,198,0.68);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    transition: transform .3s ease, box-shadow .2s ease, border .2s ease;
+}
+
+/* hover imagem */
+.menu-card:hover img {
+    transform: scale(1.2);
+    border: 1px solid rgb(255,119,119);
+    box-shadow: 0 12px 25px rgba(255,0,0,0.4);
+}
+
+/* título */
+.menu-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(136,2,2);
+    margin-bottom: 30px;
+    transition: color .2s ease;
+}
+
+/* hover título */
+.menu-card:hover h2 {
+    color: rgb(255,24,24);
+}
