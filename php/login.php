@@ -23,16 +23,46 @@ if(isset($_SESSION['usuario'])){
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Fraternité Crêpe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script defer src="../js/mainMenu.js"></script>
+    <link rel="stylesheet" href="../css/mainMenu.css">
 </head>
-<body class="bg-light">
+
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                <img id="logoMenu" src="../img/Logo_Fraternite_Crepe.png" alt="Fraternité Crêpe" class="img-fluid">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../picsPage.html">Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../form.html">Orçamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">História do Crepe</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="php/login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
-
     <div class="card shadow p-4" style="width: 380px;">
         <h3 class="text-center fw-bold mb-4">Login</h3>
 
@@ -48,15 +78,49 @@ if(isset($_SESSION['usuario'])){
                 <input type="password" class="form-control" name="senha" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">
+            <button type="submit" class="btn btn-danger w-100">
                 Entrar
             </button>
-
         </form>
     </div>
-
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="iconWhatsApp">
+    <a href="https://wa.me/5541991319322" target="_blank">
+        <img src="../img/logos/whatsappLogo.png" alt="WhatsApp">
+    </a>
+</div>
+
+<footer class="rodape">
+    <div class="container">
+
+        <div class="footer-linha">
+
+            <div class="redesocial">
+                <a href="https://www.instagram.com/fraternitecrepe/" target="_blank">
+                    <img src="../img/logos/instagramLogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/Fraternitecrepecuritiba" target="_blank">
+                    <img src="../img/logos/facebookLogo.png" alt="Facebook">
+                </a>
+            </div>
+
+            <div class="footer-centro">
+                <div class="footer-texto">
+                    <p>Copyright 2022 © Fraternité Crêpe</p>
+                </div>
+
+                <div class="pagamentos">
+                    <img class="visa" src="../img/logos/visaLogo.png" alt="Visa">
+                    <img class="master" src="../img/logos/mastercardLogo.png" alt="Mastercard">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
 </body>
 </html>
