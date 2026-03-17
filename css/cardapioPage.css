@@ -21,6 +21,7 @@ MENU SECTION
     width: 100%;
     margin: 0 auto;
     padding: 2rem;
+    max-width: 1300px;
     will-change: transform, opacity;
     animation-duration: 1s;
 }
@@ -40,14 +41,14 @@ h1 {
     font-weight: 530;
     letter-spacing: 1px;
     margin-top: 2rem;
-    margin-bottom: 5px;
+    margin-bottom: -2rem;
     text-align: left;
 }
 
 .menu-description {
     max-width: 1300px;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    border-bottom: 2px solid rgb(198, 2, 2);
 }
 
 .menu-blocoTexto {
@@ -59,9 +60,9 @@ h1 {
 
 .menu-blocoTexto p {
     justify-content: flex-start;
-    width: 60%;
+    width: 50%;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     color: #2c2c2c;
 }
@@ -70,14 +71,17 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.menu-blocoTexto img {
+.menu-blocoTexto img, .video-card {
     display: block;
     object-fit: cover;
     width: 100%;
-    max-width: 320px;
+    max-width: 380px;
+    height: 480px;
+    margin-bottom: 3rem;
     border-radius: 5px;
     box-shadow: 1px 2px 20px rgb(0, 0, 0);
 }
@@ -89,11 +93,13 @@ GRID DOS CARDÁPIOS
 .menu-cards {
     display: flex;
     flex-direction: row;
-    max-width: 1520px;
-    padding: 5rem;
-    gap: 5rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 560px;
+    padding: 1rem;
+    gap: 3rem;
+    margin-top: 2rem;
     will-change: transform, opacity;
-    animation: bounceInLeft 650ms ease-in;
 }
 
 
@@ -101,15 +107,13 @@ GRID DOS CARDÁPIOS
 CARD INDIVIDUAL
 =========================================================== */
 .menu-card {
-    text-align: center;
-    max-width: 520px;
-    max-height: 1720px;
+    object-fit: cover;
 }
 
 /* imagem */
 .menu-card img {
     width: 100%;
-    max-width: 520px;
+    max-width: 620px;
     border-radius: 5px;
     border: 1px solid rgba(198,198,198,0.68);
     box-shadow: 0 8px 25px rgba(0,0,0,0.18);
@@ -118,22 +122,29 @@ CARD INDIVIDUAL
 
 /* hover imagem */
 .menu-card:hover img {
-    transform: scale(1.0);
+    transform: scale(1.1);
     border: 1px solid rgba(9, 9, 9, 0.345);
     box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.481);
 }
 
-/* título */
+/* título / texto*/
 .menu-card h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
     color: rgb(136,2,2);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     transition: color .2s ease;
 }
 
 /* hover título */
 .menu-card:hover h2 {
     color: rgb(255,24,24);
+}
+
+.menu-card p {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 1rem;
+    color: #222222;
 }
