@@ -24,7 +24,7 @@ document.addEventListener('click', function (event) {
 
 
 /* ============ ICONE WHATSAPP ANIMATION ============ */
-const whatsApp = document.querySelector('.iconWhatsApp');
+const whatsApp = document.querySelector('.whatsapp-float');
 
 function chamarAtencao() {
   whatsApp.classList.remove('animate__animated', 'animate__shakeY');

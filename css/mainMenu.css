@@ -103,7 +103,6 @@ header .navbar {
 /* ===========================================================
 RODAPÉ
 =========================================================== */
-
 .footer {
   background-color: #010729;
   color: #f5eeee;
@@ -124,7 +123,7 @@ RODAPÉ
 .social-links {
   display: flex;
   gap: 15px;
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
 }
 
 .social-links img {
@@ -142,7 +141,6 @@ RODAPÉ
 /* texto */
 .footer-text {
   font-size: 10px;
-  margin-bottom: 1px;
 }
 
 /* pagamentos */
@@ -167,7 +165,7 @@ BOTÃO WHATSAPP FIXO
   height: clamp(50px, 6vw, 75px);
   position: fixed;
   bottom: 20px;
-  right: 15px;
+  right: 2rem;
   border-radius: 100%;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(29,233,77,.3);
@@ -396,7 +394,7 @@ RESPONSIVIDADE
   }
 
   .whatsapp-float {
-    right: 10px;
+    right: 1.2rem;
   }
 }
 
@@ -441,6 +439,6 @@ RESPONSIVIDADE
   }
 
     .whatsapp-float {
-    right: 10px;
+    right: 1.2rem;
   }
 }
