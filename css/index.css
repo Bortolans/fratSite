@@ -59,15 +59,15 @@ ANIMAÇÕES E ESTILO GLOBAL
 }
 
 html, body {
-color: #000000;
-font-family: 'Nunito', sans-serif;
-text-align: center;
+  color: #000000;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
 }
 
 fieldset {
-border: none;
-margin: 0;
-padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -75,13 +75,13 @@ padding: 0;
 FIELD
 =========================================================== */
 .fieldservico {
-width: 100%;
-height: 100%;
-max-width: 1560px;
-margin: 0 auto;
-padding: 2rem;
-will-change: transform, opacity;
-animation-duration: 1s;
+  width: 100%;
+  height: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 2rem;
+  will-change: transform, opacity;
+  animation-duration: 1s;
 }
 
 
@@ -89,75 +89,75 @@ animation-duration: 1s;
 IMAGENS DO TOPO
 ============================= */
 .holder {
-will-change: transform, opacity;
-margin-top: 10px;
-padding: 1rem;
-animation: bounceInLeft 650ms ease-in;
+  will-change: transform, opacity;
+  margin-top: 10px;
+  padding: 1rem;
+  animation: bounceInLeft 650ms ease-in;
 }
 
 
 .imagem {
-text-align: center;
-max-width: 220px;
+  text-align: center;
+  max-width: 220px;
 }
 
 .imagem img,
 .imagem .img-fluid {
-width: 65%;
-border-radius: 14px;
-border: 0.5px solid rgba(198, 198, 198, 0.685);
-box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-transition: transform 0.3s ease, box-shadow .2s ease;
+  width: 65%;
+  border-radius: 14px;
+  border: 0.5px solid rgba(198, 198, 198, 0.685);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow .2s ease;
 }
 
 .tem-hover .imagem:hover img,
 .tem-hover .imagem:hover .img-fluid {
-transform: scale(1.1);
-border: 1px solid rgb(255, 119, 119);
-box-shadow: 0 12px 25px rgb(255, 0, 0);
+  transform: scale(1.1);
+  border: 1px solid rgb(255, 119, 119);
+  box-shadow: 0 12px 25px rgb(255, 0, 0);
 }
 
 .imagem h2 {
-font-size: 1.2rem;
-font-weight: 700;
-letter-spacing: 1px;
-color: rgb(136, 2, 2);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(136, 2, 2);
 }
 
 .tem-hover .imagem:hover h2 {
-color: rgb(255, 24, 24);
+  color: rgb(255, 24, 24);
 }
 
 .fotoInicio {
-float: left;
-width: clamp(110px, 12vw, 180px);
-margin: 0 2rem 1rem 1rem;
-border-radius: 50px;
-height: auto;
-display: block;
+  float: left;
+  width: clamp(110px, 12vw, 180px);
+  margin: 0 2rem 1rem 1rem;
+  border-radius: 50px;
+  height: auto;
+  display: block;
 }
 
 
 /* Linha decorativa */
 .bordaInicio {
-will-change: transform, opacity;
-margin-top: 2rem;
-margin-bottom: 2rem;
-animation: bounceInRight 700ms ease-in; 
+  will-change: transform, opacity;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: bounceInRight 700ms ease-in;
 }
 
 .bordaInicio::before {
-content: "";
-display: block;
-width: 20%;
-height: 7px;
-background-image: url("../img/index/bandeiraFrench.webp") ;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-margin: 1rem auto 0;
-border-radius: 10px;
-border: 0.5px solid rgb(148, 148, 148);
+  content: "";
+  display: block;
+  width: 20%;
+  height: 7px;
+  background-image: url("../img/index/bandeiraFrench.webp") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem auto 0;
+  border-radius: 10px;
+  border: 0.5px solid rgb(148, 148, 148);
 }
 
 
@@ -166,39 +166,39 @@ SEÇÃO e CONTAINER TEXTO PRINCIPAL BLOCO 1
 ============================= */
 
 .blocoTexto {
-display: flex;
-justify-content: center;
-align-items: center;
-box-sizing: border-box;
-background: #ffffff;
-font-family: "Garamond", serif;
-border: 1px solid rgba(0, 0, 0, 0.295);
-border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-family: "Garamond", serif;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+  border-radius: 15px;
 }
 
 .textoContainer {
-letter-spacing: normal;
-line-height: 1.3;
-box-sizing: border-box;
+  letter-spacing: normal;
+  line-height: 1.3;
+  box-sizing: border-box;
 }
 
 .textoPrincipal1 {
-break-inside: avoid;
-margin-bottom: 2rem;
+  break-inside: avoid;
+  margin-bottom: 2rem;
 }
 
 .texto1 {
-text-align: right;
-font-size: 1.4rem;
-font-weight: 400;
-margin-bottom: 1rem;
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 .tituloFazer {
-text-transform: uppercase;
-font-size: 1.5rem;
-text-align: center;
-padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 
@@ -207,13 +207,13 @@ TÍTULOS
 ============================= */
 
 h3 {
-font-family: 'Nunito', sans-serif;
-font-weight: 600;
-font-size: 2rem;
-margin-bottom: 2rem;
-font-family: "Garamond", serif;
-font-weight: 530;
-letter-spacing: 1px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Garamond", serif;
+  font-weight: 530;
+  letter-spacing: 1px;
 }
 
 
@@ -221,9 +221,9 @@ letter-spacing: 1px;
 SEÇÃO DE CONTATO
 =========================================================== */
 .contatosFale {
-margin-top: 3rem;
-padding: 1rem 0;
-line-height: 5px;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  line-height: 5px;
 }
 
 .contatosFale h6 {
@@ -238,21 +238,13 @@ line-height: 5px;
   line-height: 5px;
 }
 
-.EnvieEmail {
-display: inline-block;
-margin: 1.5rem auto;
-width: auto;
-max-width: 320px;
-padding: 10px 18px;
-background-color: rgb(255, 255, 255);
-border: 1px solid rgba(0, 0, 0, 1);
-font-size: 1rem;
-cursor: pointer;
-transition: background-color 0.1s ease, transform 0.1s ease;
-border-radius: 10px;
-}
-
-.EnvieEmail:hover {
-background-color: rgb(233, 233, 233);
+.quote-btn {
+  margin: 1.5rem auto;
+  width: auto;
+  max-width: 320px;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
