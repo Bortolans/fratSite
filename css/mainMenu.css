@@ -104,7 +104,7 @@ header .navbar {
 RODAPÉ
 =========================================================== */
 
-.rodape {
+.footer {
   background-color: #010729;
   color: #f5eeee;
   width: 100%;
@@ -114,25 +114,25 @@ RODAPÉ
   box-sizing: border-box;
 }
 
-.footer-linha {
+.footer-row {
   display: flex;
   align-items: center;
   margin-right: 4rem;
 }
 
 /* redes sociais */
-.redesocial {
+.social-links {
   display: flex;
   gap: 15px;
   margin-top: 1.5rem;
 }
 
-.redesocial img {
+.social-links img {
   max-width: 30px;
 }
 
 /* bloco central */
-.footer-centro {
+.footer-center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,29 +140,29 @@ RODAPÉ
 }
 
 /* texto */
-.footer-texto {
+.footer-text {
   font-size: 10px;
   margin-bottom: 1px;
 }
 
 /* pagamentos */
-.pagamentos {
+.payment-methods {
   display: flex;
   gap: 15px;
 }
 
-.pagamentos img {
+.payment-methods img {
   max-width: 25px;
 }
 
-.visa{ width: 35px; }
-.master{ width: 40px; }
+.payment-visa { width: 35px; }
+.payment-mastercard { width: 40px; }
 
 
 /* ===========================================================
 BOTÃO WHATSAPP FIXO
 =========================================================== */
-.iconWhatsApp {
+.whatsapp-float {
   width: clamp(50px, 6vw, 75px);
   height: clamp(50px, 6vw, 75px);
   position: fixed;
@@ -173,13 +173,13 @@ BOTÃO WHATSAPP FIXO
   box-shadow: 0 0 2px rgba(29,233,77,.3);
 }
 
-.iconWhatsApp img {
+.whatsapp-float img {
   width: 100%;
   height: auto;
   border-radius: 50%;
 }
 
-.iconWhatsApp:hover {
+.whatsapp-float:hover {
   background-color: #87f78b;
   transition: 400ms;
   padding: 5px;
@@ -307,19 +307,19 @@ RESPONSIVIDADE
 
   .navbar-brand { margin: 0 auto; }
 
-  .redesocial{
+  .social-links {
     gap: 10px;
   }
 
-  .pagamentos{
+  .payment-methods {
     gap: 10px;
   }
 
-  .redesocial img {
+  .social-links img {
     width: 25px;
   }
 
-  .pagamentos img {
+  .payment-methods img {
     width: 25px;
   }
 }
@@ -375,27 +375,27 @@ RESPONSIVIDADE
 
   .navbar-brand { margin: 0 auto; }
 
-  .footer-linha {
+  .footer-row {
     margin-right: 2rem;
   }
 
-  .redesocial{
+  .social-links {
     gap: 8px;
   }
 
-  .pagamentos{
+  .payment-methods {
     gap: 8px;
   }
 
-  .redesocial img {
+  .social-links img {
     width: 25px;
   }
 
-  .pagamentos img {
+  .payment-methods img {
     width: 20px;
   }
 
-  .iconWhatsApp {
+  .whatsapp-float {
     right: 10px;
   }
 }
@@ -420,27 +420,27 @@ RESPONSIVIDADE
 
   .navbar-toggler { right: 5px; }
 
-  .footer-linha {
+  .footer-row {
     margin-right: 1rem;
   }
 
-  .redesocial{
+  .social-links {
     gap: 8px;
   }
 
-  .pagamentos{
+  .payment-methods {
     gap: 8px;
   }
 
-  .redesocial img {
+  .social-links img {
     width: 25px;
   }
 
-  .pagamentos img {
+  .payment-methods img {
     width: 20px;
   }
 
-    .iconWhatsApp {
+    .whatsapp-float {
     right: 10px;
   }
 }

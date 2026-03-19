@@ -74,7 +74,7 @@ fieldset {
 /* ===========================================================
 FIELD
 =========================================================== */
-.fieldservico {
+.service-section {
   width: 100%;
   height: 100%;
   max-width: 1560px;
@@ -88,7 +88,7 @@ FIELD
 /* ============================
 IMAGENS DO TOPO
 ============================= */
-.holder {
+.holder-sections {
   will-change: transform, opacity;
   margin-top: 10px;
   padding: 1rem;
@@ -96,13 +96,13 @@ IMAGENS DO TOPO
 }
 
 
-.imagem {
+.holder-imagem {
   text-align: center;
   max-width: 220px;
 }
 
-.imagem img,
-.imagem .img-fluid {
+.holder-imagem img,
+.holder-imagem .img-fluid {
   width: 65%;
   border-radius: 14px;
   border: 0.5px solid rgba(198, 198, 198, 0.685);
@@ -110,25 +110,25 @@ IMAGENS DO TOPO
   transition: transform 0.3s ease, box-shadow .2s ease;
 }
 
-.tem-hover .imagem:hover img,
-.tem-hover .imagem:hover .img-fluid {
+.tem-hover .holder-imagem:hover img,
+.tem-hover .holder-imagem:hover .img-fluid {
   transform: scale(1.1);
   border: 1px solid rgb(255, 119, 119);
   box-shadow: 0 12px 25px rgb(255, 0, 0);
 }
 
-.imagem h2 {
+.holder-imagem h2 {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: rgb(136, 2, 2);
 }
 
-.tem-hover .imagem:hover h2 {
+.tem-hover .holder-imagem:hover h2 {
   color: rgb(255, 24, 24);
 }
 
-.fotoInicio {
+.service-image {
   float: left;
   width: clamp(110px, 12vw, 180px);
   margin: 0 2rem 1rem 1rem;
@@ -139,14 +139,14 @@ IMAGENS DO TOPO
 
 
 /* Linha decorativa */
-.bordaInicio {
+.section-divider {
   will-change: transform, opacity;
   margin-top: 2rem;
   margin-bottom: 2rem;
   animation: bounceInRight 700ms ease-in;
 }
 
-.bordaInicio::before {
+.section-divider::before {
   content: "";
   display: block;
   width: 20%;
@@ -165,7 +165,7 @@ IMAGENS DO TOPO
 SEÇÃO e CONTAINER TEXTO PRINCIPAL BLOCO 1
 ============================= */
 
-.blocoTexto {
+.service-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,25 +176,25 @@ SEÇÃO e CONTAINER TEXTO PRINCIPAL BLOCO 1
   border-radius: 15px;
 }
 
-.textoContainer {
+.service-text {
   letter-spacing: normal;
   line-height: 1.3;
   box-sizing: border-box;
 }
 
-.textoPrincipal1 {
+.service-main {
   break-inside: avoid;
   margin-bottom: 2rem;
 }
 
-.texto1 {
+.service-paragraph {
   text-align: right;
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-.tituloFazer {
+.service-title {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-align: center;
@@ -220,19 +220,19 @@ h3 {
 /* ===========================================================
 SEÇÃO DE CONTATO
 =========================================================== */
-.contatosFale {
+.contact-section {
   margin-top: 3rem;
   padding: 1rem 0;
   line-height: 5px;
 }
 
-.contatosFale h6 {
+.contact-section h6 {
   padding: 0.8rem;
   font-size: 20px;
   font-weight: 550;
 }
 
-.contatosFale p {
+.contact-section p {
   font-size: 18px;
   font-weight: 520;
   line-height: 5px;

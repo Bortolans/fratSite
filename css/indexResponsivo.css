@@ -17,7 +17,7 @@ RESPONSIVIDADE
 /* ======== DESKTOP ======== */
 @media (min-width: 1200px) {
 
-    .textoContainer {
+    .service-text {
         column-count: 2;
         column-gap: 2rem;
     }
@@ -28,12 +28,12 @@ RESPONSIVIDADE
 @media (min-width: 992px) and 
        (max-width: 1199px) {
 
-    .textoContainer {
+    .service-text {
         column-count: 2;
         column-gap: 3rem;
     }
 
-    .fieldservico {
+    .service-section {
         padding: 0;
     }
 }
@@ -43,17 +43,17 @@ RESPONSIVIDADE
 @media (min-width: 822px) and 
        (max-width: 991px) {
 
-    .fieldservico {
+    .service-section {
         padding: 0;
     }
 
-    .textoContainer {
+    .service-text {
         column-count: 2;
         column-gap: 2rem;
         padding: 0 0.25rem;
     }
 
-    .fotoInicio {
+    .service-image {
         margin: 1rem;
     }
 }
@@ -63,25 +63,25 @@ RESPONSIVIDADE
 @media (min-width: 767px) and 
        (max-width: 821px) {
 
-    .fieldservico { 
+    .service-section {
         padding: 1rem;
     }
 
-    .textoContainer {
+    .service-text {
         padding: 0 0.25rem;
     }
 
-    .fotoInicio {
+    .service-image {
         margin: 1.5rem;
     }
 
-    .tituloFazer {
+    .service-title {
         text-align: center !important;
         letter-spacing: 2px;
         font-size: 0.95rem;
     }
 
-    .textoInfo p {
+    .service-description p {
         text-align: center;
         font-size: 1.3rem !important;
         padding: 0 1rem;
@@ -94,29 +94,29 @@ RESPONSIVIDADE
 @media (min-width: 501px) and 
        (max-width: 768px) {
 
-    .fieldservico { 
+    .service-section {
         padding: 0.5rem;
     }
 
-    .holder {
+    .home-sections {
         gap: 1rem;
         padding: 0rem;
     }
 
-    .imagem img { 
+    .home-card img { 
         max-width: 100%; 
     }
 
-    .containerArea {
+    .container-area {
         flex-direction: column;
         margin: 0;
         padding: 0rem;
         font-size: 1rem;
     }
 
-    .mapa iframe {width: 30%; height: auto;}
+    .map-container iframe {width: 30%; height: auto;}
 
-    .fotoInicio {
+    .service-image {
         margin: 0 0 1rem 0;
     }
 
@@ -125,23 +125,23 @@ RESPONSIVIDADE
         font-size: 1.95rem;
     }
 
-    .tituloFazer {
+    .service-title {
         text-align: center !important;
         letter-spacing: 2px;
         font-size: 0.95rem;
     }
 
-    .textoInfo p {
+    .service-description p {
         text-align: left;
         font-size: 1.3rem !important;
         padding: 0 1rem;
     }
 
-    .contatosFale h6 {
+    .contact-section h6 {
         font-size: 18px;
     }
 
-    .contatosFale p {
+    .contact-section p {
         font-size: 17px;
         line-height: 4px;
     }
@@ -151,37 +151,37 @@ RESPONSIVIDADE
 /* ======== MOBILE PEQUENO ======== */
 @media screen and (max-width: 500px) {
 
-    .fieldservico {
+    .service-section {
         padding: 0.5rem;
     }
-    .holder { gap: 1rem; }
+    .home-sections { gap: 1rem; }
 
-    .imagem img {width: 60% !important;}
+    .home-card img {width: 60% !important;}
 
     h3 {font-size: 1.6rem !important;}
 
-    .fotoInicio {
+    .service-image {
         margin: 1rem 0 2rem 0;
         max-width: 100px;
     }
 
-    .textoInfo p {
+    .service-description p {
         text-align: left;
         font-size: 1.3rem !important;
         padding: 0 1rem;
     }
 
-    .tituloFazer {
+    .service-title {
         text-align: center !important;
         letter-spacing: 2px;
         font-size: 0.95rem;
     }
 
-    .contatosFale h6 {
+    .contact-section h6 {
         font-size: 16px;
     }
 
-    .contatosFale p {
+    .contact-section p {
         font-size: 15px;
         line-height: 4px;
     }
@@ -191,11 +191,11 @@ RESPONSIVIDADE
 /* ======== MOBILE MUITO PEQUENO ======== */
 @media screen and (max-width: 358px) {
 
-    .fieldservico {
+    .service-section {
         padding: 0 !important;
     }
 
-    .fotoInicio {
+    .service-image {
         float: none;
         display: block;
         margin: 0 auto 0.5rem auto;
@@ -203,16 +203,16 @@ RESPONSIVIDADE
         max-width: 90px;
     }
 
-    .fotoTexto {
+    .service-image-wrapper {
         text-align: center;
     }
 
-    .textoInfo p {
+    .service-description p {
         font-size: 1rem;
         text-align: center;
     }
 
-    .tituloFazer {
+    .service-title {
         text-align: center !important;
         letter-spacing: 1px;
         font-weight: 500;

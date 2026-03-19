@@ -12,16 +12,16 @@ Data Criação: 04/12/2025
 /* ===========================================================
 SLIDE DE FOTOS
 =========================================================== */
-.sliderVideobloco {
+.media-section {
 margin-top: 1rem;
 box-sizing: border-box;
 }
 
-.slideContainer, .instaContainer {
+.media-slider, .instagram-section {
 width: 100%;
 }
 
-.fotoSlideBox {
+.media-slide-image {
 width: 580px;
 height: 210px;
 object-fit: cover;
@@ -34,14 +34,14 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 /* ===========================================================
 INSTAGRAM
 =========================================================== */
-.instaContainer {
+.instagram-section {
 display: flex;
 flex-wrap: nowrap;
 justify-content: center;
 gap: 1rem;
 }
 
-.instaWrapper {
+.instagram-embed {
 overflow: hidden;
 width: 100% !important;
 height: 50% !important;
@@ -60,14 +60,14 @@ min-width: 0 !important;
 ICON CREPE
 =========================================================== */
 
-.displayImgCrepe{
+.crepe-gallery {
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 3rem;
 }
 
-.fotoCrepeExem {
+.crepe-image {
 width: calc(50% - 1.5rem) !important;
 height: auto;
 max-width: 180px;
@@ -75,7 +75,7 @@ margin: 0;
 border-radius: 50px;
 }
 
-.fotoCrepeExem2 {
+.crepe-image-secondary {
 width: calc(50% - 1.5rem) !important;
 height: auto;
 max-width: 180px;
@@ -87,7 +87,7 @@ border-radius: 50px;
 /* ===========================================================
 MAPA
 =========================================================== */
-.mapa iframe {
+.map-container iframe {
 border: 0;
 }
 
@@ -101,21 +101,21 @@ RESPONSIVIDADE
 @media (min-width: 822px) and 
        (max-width: 991px) {
 
-    .instaContainer {
+    .instagram-section {
         justify-content: center;
         gap: 5px;
     }
 
-    .instaWrapper {
+    .instagram-embed {
         width: 50%;
         max-width: 200px;
     }
 
-    .displayImgCrepe {
+    .crepe-gallery {
         justify-content: center;
     }
 
-    .fotoSlideBox {
+    .media-slide-image {
         max-width: 480px !important;
     }
 }
@@ -125,16 +125,16 @@ RESPONSIVIDADE
 @media (min-width: 769px) and 
        (max-width: 821px) {
     
-    .displayImgCrepe {
+    .crepe-gallery {
         display: none;
     }
 
-    .instaContainer {
+    .instagram-section {
         justify-content: center;
         gap: 1rem;
     }
 
-    .instaWrapper {
+    .instagram-embed {
         width: 100%;
         max-width: 250px;
     }
@@ -145,21 +145,21 @@ RESPONSIVIDADE
 @media (min-width: 501px) and 
        (max-width: 768px) {
 
-    .instaContainer {
+    .instagram-section {
         justify-content: center;
         gap: 1rem;
     }
 
-    .instaWrapper {
+    .instagram-embed {
         width: 100%;
         max-width: 220px;
     }
 
-    .displayImgCrepe {
+    .crepe-gallery {
         display: none;
     }
 
-    .fotoSlideBox {
+    .media-slide-image {
         max-height: 120px !important;
     }
 }
@@ -168,23 +168,23 @@ RESPONSIVIDADE
 /* ======== MOBILE PEQUENO ======== */
 @media screen and (max-width: 500px) {
 
-    .displayImgCrepe {
+    .crepe-gallery {
         display: none !important;
     }
 
-    .instaContainer {
+    .instagram-section {
         float: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
 
-    .instaWrapper {
+    .instagram-embed {
         width: 100%;
         max-width: 200px;
     }
 
-    .fotoSlideBox {
+    .media-slide-image {
         max-height: 120px !important;
     }
 }
