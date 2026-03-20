@@ -53,19 +53,19 @@ Data Criação: 29/10/2025
 </header>
 
 
-<main class="container mt-5">
+<main class="container-fluid px-0">
     <div class="text-center">
         <h1>Formulario de Orçamento</h1>
         <p>Por favor preencha este formulário com as informações necessárias</p>
     </div>
 
     <section class="sectionForm">
-        <form id="formOrcamento" method="get" action="formAction.html" class="mx-auto">
-            <div class="legend">
-                <legend><strong>Dados Pessoais</strong></legend>
-            </div>
+        <form id="formOrcamento" method="GET" action="formAction.html" class="mx-auto">
 
+            <!-- Dados Pessoais -->
             <fieldset class="row g-3">
+                <legend><strong>Dados Pessoais</strong></legend>
+
                 <div class="col-md-6">
                     <label for="nome" class="form-label"><strong>Nome:</strong></label>
                     <input name="nome" id="nome" type="text" class="form-control" required />
@@ -93,11 +93,10 @@ Data Criação: 29/10/2025
                 </div>
             </fieldset>
 
-            <div class="legend">
+            <!-- Cardápio -->
+            <fieldset class="mt-4">
                 <legend><strong>Selecione o Cardápio</strong></legend>
-            </div>
 
-            <fieldset>
                 <div class="cardapios d-flex flex-wrap justify-content-center gap-3">
                     <label><input id="marselha" type="radio" name="cardapio" value="Marselha" class="inline" checked /> Marselha</label>
                     <label><input id="premier" type="radio" name="cardapio" value="Premier" class="inline" /> Premier</label>
@@ -106,14 +105,15 @@ Data Criação: 29/10/2025
                 </div>
             </fieldset>
 
-            <div class="legend">
+            <!-- Informações do Evento -->
+            <fieldset class="row g-3 mt-4">
                 <legend><strong>Informações do Evento</strong></legend>
-            </div>
 
-            <fieldset class="row g-3">
                 <div class="col-12 endereco">
                     <label class="form-label"><strong>Endereço:</strong></label>
-                    <input type="text" id="cep" name="cep" class="form-control cep" placeholder="CEP 00000-000" maxlength="8" pattern="\d{8}" required>
+                    <input type="text" id="cep" name="cep" class="form-control cep" placeholder="CEP 00000-000"
+                        maxlength="8" pattern="\d{8}" required>
+
                     <input type="text" id="rua" name="rua" class="form-control rua mt-3" placeholder="Rua" readonly>
                     <input type="text" id="numeroCasa" name="numeroCasa" class="form-control numeroCasa mt-3" placeholder="Número da residência" required>
                     <input type="text" id="bairro" name="bairro" class="form-control bairro mt-3" placeholder="Bairro" readonly>
@@ -128,20 +128,19 @@ Data Criação: 29/10/2025
 
                 <div class="col-md-3">
                     <label for="adultos" class="form-label"><strong>Adultos:</strong></label>
-                    <input name="adultos" id="adultos" class="form-control adultos" maxlength="3" required />
+                    <input type="number" name="adultos" id="adultos" class="form-control adultos" min="0" max="999" required />
                 </div>
 
                 <div class="col-md-3">
                     <label for="criancas" class="form-label"><strong>Crianças:</strong></label>
-                    <input name="criancas" id="criancas" class="form-control criancas" maxlength="3" required />
+                    <input type="number" name="criancas" id="criancas" class="form-control criancas" min="0" max="999" required />
                 </div>
             </fieldset>
 
-            <div class="legend">
-                <legend><strong>Informações do Evento</strong></legend>
-            </div>
+            <!-- Serviços -->
+            <fieldset class="mt-4">
+                <legend><strong>Serviços do Evento</strong></legend>
 
-            <fieldset>
                 <div class="servicos mt-3">
                     <div class="selector-row d-flex justify-content-between">
                         <label>Incluir serviço de garçom?</label>
@@ -172,13 +171,16 @@ Data Criação: 29/10/2025
                 </div>
             </fieldset>
 
+            <!-- Observações -->
             <div class="mt-4">
-                <label for="bio" class="form-label"><strong>Informações adicionais:</strong></label>
+                <legend for="bio" class="form-label"><strong>Informações adicionais:</strong></legend>
                 <textarea name="bio" id="bio" class="form-control" rows="3" placeholder="Meu evento é um aniversário e..."></textarea>
             </div>
 
+            <!-- Referência -->
             <fieldset class="mt-4">
-                <label class="form-label"><strong>Como você ouviu falar de nós?</strong></label>
+                <legend><strong>Como você ouviu falar de nós?</strong></legend>
+
                 <select name="referencia" id="referencia" class="form-select referencia">
                     <option value="">(Selecione)</option>
                     <option value="Instagram">Instagram</option>
@@ -188,8 +190,9 @@ Data Criação: 29/10/2025
                 </select>
             </fieldset>
 
+            <!-- Termos -->
             <div class="form-check container mt-4">
-                <input type="checkbox" class="form-check-input" id="terms_and_conditions" required>
+                <input type="checkbox" name="terms_and_conditions" class="form-check-input" id="terms_and_conditions" required>
                 <label class="form-check-label" for="terms_and_conditions">
                     Eu concordo com os <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
                 </label>
@@ -198,6 +201,7 @@ Data Criação: 29/10/2025
             <div class="text-center mt-4">
                 <input type="submit" value="Enviar" class="btn btn-light px-4 py-2">
             </div>
+
         </form>
     </section>
 </main>
