@@ -16,11 +16,9 @@ html {
 color: #000000;
 font-family: 'Nunito', sans-serif;
 font-style: normal;
-max-width: 100%;
-min-width: 10%;
 }
 
-p {
+.container-fluid p {
 padding: 0.5rem;
 text-align: center;
 }
