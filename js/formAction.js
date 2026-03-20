@@ -14,7 +14,7 @@ Data Criação: 05/11/2025
 
 
 /* Recupera os valores do formulário armazenados no localStorage */
-window.onload = function() {
+window.addEventListener('load', function() {
     const destino = document.getElementById('formEnviado');
 
     // Lista de todos os campos do formulário
@@ -84,7 +84,7 @@ window.onload = function() {
         document.createRange().createContextualFragment(tabela),
         voltarEnviar
     );
-};
+});
 
 // Função para enviar o formulário oculto
 function submitForm() {

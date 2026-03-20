@@ -25,9 +25,21 @@ document.getElementById('formOrcamento').addEventListener('submit', function(e) 
 
     // Salva valores no localStorage
     campos.forEach(campo => {
+        if (campo === "cardapio"){
+            const selecionado = document.querySelector('input[name="cardapio"]:checked');
+            if (selecionado) {
+                localStorage.setItem(campo, selecionado.value);
+            }
+            return;
+        }
+
         const el = document.getElementById(campo);
-        if(el){
-            localStorage.setItem(campo, el.value);
+        if (el) {
+            if(el.type === "checkbox"){
+                localStorage.setItem(campo, el.checked ? "sim" : "não");
+            } else {
+                localStorage.setItem(campo, el.value);
+            }
         }
     });
 
@@ -84,7 +96,7 @@ document.getElementById('cep').addEventListener('blur', function() {
                     document.getElementById('estado').value = data.uf || '';
 
                     // Chama campo número da residencia para o usuário preencher
-                    document.getElementById('numeroCasa').value = '0'; 
+                    document.getElementById('numeroCasa').value = '';
                     document.getElementById('numeroCasa').focus();  
                     document.getElementById('numeroCasa').setAttribute('title', 'Preencha o número da residência');
                 } else {
@@ -107,28 +119,27 @@ document.getElementById('numeroCasa').addEventListener('input', function() {
 /* Limitação do campo Número de adultos 0 a 200 */
 document.getElementById('adultos').addEventListener('input', function () {
     // mantém apenas números
-    this.value = this.value.replace(/\D/g, '');
-    if (parseInt(this.value) > 200) {
+    const valor = parseInt(this.value);
+    if (!isNaN(valor) && valor > 200) {
         this.value = 200;
     }
 });
 
 /* Limitação do campo Número de crianças 0 a 100 */
 document.getElementById('criancas').addEventListener('input', function() {
-    this.value = this.value.replace(/\D/g, '');
-    if (parseInt(this.value) > 100) {
+    const valor = parseInt(this.value);
+    if (!isNaN(valor) && valor > 100) {
         this.value = 100;
     }
 });
 
-
 /* Limitação do campo Nome e Sobrenome para somente letras */
 document.getElementById('nome').addEventListener('input', function() {
     // Mantém apenas letras
-    this.value = this.value.replace(/[0-9]/g, '');
+    this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
 });
 
 document.getElementById('sobrenome').addEventListener('input', function() {
     // Mantém apenas letras
-    this.value = this.value.replace(/[0-9]/g, '');
+    this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
 });
