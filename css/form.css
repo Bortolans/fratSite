@@ -41,11 +41,10 @@ padding: 10px;
 /* ===========================================================
 LEGENDA
 =========================================================== */
-.legend {
-margin-top: 1rem;
+legend {
 text-align: center;
-padding: 1px;
-font-size: 19px;
+margin-bottom: 1rem;
+padding: 1rem;
 }
 
 
