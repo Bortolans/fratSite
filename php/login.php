@@ -37,7 +37,7 @@ if(isset($_SESSION['usuario'])){
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
+        <div class="container">
 
             <a class="navbar-brand" href="index.html">
                 <img id="logoMenu" src="../img/Logo_Fraternite_Crepe.png" alt="Fraternité Crêpe" class="img-fluid">
