@@ -61,36 +61,31 @@ if(isset($_SESSION['usuario'])){
     </nav>
 </header>
 
+<main class="container-fluid px-0">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4" style="width: 380px;">
+            <h3 class="text-center fw-bold mb-4">Login</h3>
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow p-4" style="width: 380px;">
-        <h3 class="text-center fw-bold mb-4">Login</h3>
+            <form action="loginAction.php" method="POST">
 
-        <form action="loginAction.php" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Usuário</label>
+                    <input type="text" class="form-control" name="usuario" required>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Usuário</label>
-                <input type="text" class="form-control" name="usuario" required>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Senha</label>
+                    <input type="password" class="form-control" name="senha" required>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Senha</label>
-                <input type="password" class="form-control" name="senha" required>
-            </div>
-
-            <button type="submit" class="btn btn-danger w-100">
-                Entrar
-            </button>
-        </form>
+                <button type="submit" class="btn btn-danger w-100">
+                    Entrar
+                </button>
+            </form>
+        </div>
     </div>
-</div>
+</main>
 
-
-<div class="whatsapp-float">
-    <a href="https://wa.me/5541991319322" target="_blank">
-        <img src="img/logos/whatsappLogo.png" alt="WhatsApp">
-    </a>
-</div>
 
 <footer class="footer">
     <div class="container">
@@ -121,6 +116,12 @@ if(isset($_SESSION['usuario'])){
 
     </div>
 </footer>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/5541991319322" target="_blank">
+        <img src="img/logos/whatsappLogo.png" alt="WhatsApp">
+    </a>
+</div>
 
 </body>
 </html>
