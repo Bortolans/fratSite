@@ -15,9 +15,16 @@ RESET / BASE GLOBAL
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
+html {
   height: 100%;
+  color: #000000;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   min-height: 100vh;
   min-height: 100svh;
   min-height: 100dvh;
@@ -26,9 +33,14 @@ html, body {
   background: linear-gradient(
     180deg,
     #ffffff,
-    #ffffff,
+    #fbb4b4b3,
     #f9555568
   );
+  background-attachment: fixed;
+}
+
+main {
+  flex-grow: 1;
 }
 
 /* ===========================================================
@@ -48,6 +60,8 @@ LAYOUT BASE
 HEADER / MENU
 =========================================================== */
 header .navbar {
+  box-sizing: border-box;
+  flex-shrink: 0;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -104,13 +118,14 @@ header .navbar {
 RODAPÉ
 =========================================================== */
 .footer {
+  box-sizing: border-box;
+  flex-shrink: 0;
   background-color: #010729;
   color: #f5eeee;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 1rem;
-  box-sizing: border-box;
 }
 
 .footer-row {

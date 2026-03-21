@@ -59,8 +59,6 @@ ANIMAÇÕES E ESTILO GLOBAL
 }
 
 html, body {
-  color: #000000;
-  font-family: 'Nunito', sans-serif;
   text-align: center;
 }
 
@@ -164,6 +162,9 @@ IMAGENS DO TOPO
 /* ============================
 SEÇÃO e CONTAINER TEXTO PRINCIPAL BLOCO 1
 ============================= */
+.service-section {
+  will-change: transform, opacity;
+}
 
 .service-content {
   display: flex;
