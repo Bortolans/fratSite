@@ -33,7 +33,7 @@ body {
   background: linear-gradient(
     180deg,
     #ffffff,
-    #fbb4b4b3,
+    #fdd4d4b3,
     #f9555568
   );
   background-attachment: fixed;
@@ -228,6 +228,26 @@ RESPONSIVIDADE
 @media (min-width: 822px) and 
        (max-width: 991px) {
 
+  .navbar > .container {
+    position: relative;
+    justify-content: center;
+    padding: 0.2rem;
+  }
+
+  .navbar-brand { 
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin: 0 !important; 
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    z-index: 2;
+    border: none;
+  }
+
   #menuNav {
     position: fixed;
     top: 0;
@@ -280,6 +300,26 @@ RESPONSIVIDADE
 /* === Tablet → Mobile grande === */
 @media (min-width: 501px) and 
        (max-width: 821px) {
+
+  .navbar > .container {
+    position: relative;
+    justify-content: center;
+    padding: 0.2rem;
+  }
+
+  .navbar-brand { 
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin: 0 !important; 
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    z-index: 2;
+    border: none;
+  }
 
   #menuNav {
     position: fixed;
@@ -349,6 +389,26 @@ RESPONSIVIDADE
 /* === Mobile === */
 @media (max-width: 500px) {
 
+  .navbar > .container {
+    position: relative;
+    justify-content: center;
+    padding: 0.2rem;
+  }
+
+  .navbar-brand { 
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin: 0 !important; 
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    z-index: 2;
+    border: none;
+  }
+
   #menuNav {
     position: fixed;
     top: 0;
@@ -393,8 +453,6 @@ RESPONSIVIDADE
   .navbar-dark .navbar-nav .nav-link:hover {
     color: #ffffff !important;
   }
-
-  .navbar-brand { margin: 0 auto; }
 
   .footer-row {
     margin-right: 2rem;
