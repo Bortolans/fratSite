@@ -10,19 +10,30 @@ Data Criação: 05/02/2026
 =========================================================== */
 
 
-function abrirZoom(elemento) {
+function abrirZoomImg(elemento) {
 
     const overlay = document.getElementById("zoomOverlay");
     overlay.innerHTML = "";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "midiaWrapper";
 
     const img = document.createElement("img");
     img.src = elemento.src;
     img.alt = elemento.alt;
 
-    overlay.appendChild(img);
+    const btnClose = document.createElement("span");
+    btnClose.className = "btnClose";
+    btnClose.innerHTML = '<i class="bi bi-x-circle-fill"></i>';
+
+    btnClose.onclick = () => overlay.classList.remove("ativo");
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(btnClose);
+    overlay.appendChild(wrapper);
     overlay.classList.add("ativo");
 
-    fecharZoomSetup(overlay, img);
+    fecharZoomSetup(overlay, img, btnClose);
 }
 
 
@@ -30,6 +41,9 @@ function abrirZoomVideo(src, label) {
 
     const overlay = document.getElementById("zoomOverlay");
     overlay.innerHTML = "";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "midiaWrapper";
 
     const video = document.createElement("video");
     video.src = src;
@@ -43,14 +57,22 @@ function abrirZoomVideo(src, label) {
     video.disablePictureInPicture = true;
     video.controlsList = "nodownload noremoteplayback";
 
-    overlay.appendChild(video);
+    const btnClose = document.createElement("span");
+    btnClose.className = "btnClose";
+    btnClose.innerHTML = '<i class="bi bi-x-circle-fill"></i>';
+
+    btnClose.onclick = () => overlay.classList.remove("ativo");
+
+    wrapper.appendChild(video);
+    wrapper.appendChild(btnClose);
+    overlay.appendChild(wrapper);
     overlay.classList.add("ativo");
 
-    fecharZoomSetup(overlay, video);
+    fecharZoomSetup(overlay, video, btnClose);
 }
 
 
-function fecharZoomSetup(overlay, midia) {
+function fecharZoomSetup(overlay, midia, btnClose) {
 
     midia.addEventListener("click", e => e.stopPropagation());
 
@@ -64,6 +86,7 @@ function fecharZoomSetup(overlay, midia) {
     }
 
     overlay.onclick = fechar;
+    btnClose.onclick = fechar;
 
     document.addEventListener("keydown", function esc(e) {
         if (e.key === "Escape") {
