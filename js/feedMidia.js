@@ -11,64 +11,47 @@ Data Criação: 05/02/2026
 
 /* ===== FOTOS & VIDEOS ===== */
 const midias = [
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto18.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto42.jpg", alt: "" },
+    { tipo: "video", src: "img/video_Page/fraterniteVideo9.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto43.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto7.jpg",  alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo3.mp4",  label: "" },
+
+    { tipo: "foto", src: "img/pics_Page/fraterniteFoto7.jpg",  alt: "" },
+    { tipo: "video", src: "img/video_Page/fraterniteVideo4.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto3.jpg",  alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto37.jpg", alt: "" },
-    { tipo: "video", src: "img/video_Page/fraterniteVideo10.mp4", label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto26.jpg", alt: "" },
+    { tipo: "video", src: "img/video_Page/fraterniteVideo10.mp4", label: "" },
 
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto4.jpg",  alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo1.mp4",  label: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto38.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto39.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto9.jpg",  alt: "" },
-    { tipo: "video", src: "img/video_Page/fraterniteVideo9.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto40.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto41.jpg", alt: "" },
-    { tipo: "video", src: "img/video_Page/fraterniteVideo4.mp4",  label: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto13.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto33.jpg", alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo5.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto6.jpg",  alt: "" },
-
 
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto5.jpg",  alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo11.mp4", label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto31.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto8.jpg",  alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto34.jpg", alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo7.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto36.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto10.jpg", alt: "" },
 
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto11.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto12.jpg", alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo12.mp4", label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto14.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto15.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto16.jpg", alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo6.mp4",  label: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto17.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto19.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto20.jpg", alt: "" },
     { tipo: "video", src: "img/video_Page/fraterniteVideo2.mp4",  label: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto1.jpg",  alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto2.jpg",  alt: "" },
 
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto21.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto23.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto24.jpg", alt: "" },
     { tipo: "foto", src: "img/pics_Page/fraterniteFoto25.jpg", alt: "" },
-    { tipo: "video", src: "img/video_Page/fraterniteVideo8.mp4",  label: "" },
-
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto27.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto30.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto32.jpg", alt: "" },
-    { tipo: "foto", src: "img/pics_Page/fraterniteFoto35.jpg", alt: "" }
+    { tipo: "foto", src: "img/pics_Page/fraterniteFoto32.jpg", alt: "" }
 ];
 
 midias.forEach((item, index) => {
@@ -122,7 +105,7 @@ midias.forEach(item => {
         img.loading = "lazy";
 
         card.appendChild(img);
-        img.addEventListener("click", () => abrirZoom(img));
+        img.addEventListener("click", () => abrirZoomImg(img));
     }
 
     /* ---------- VÍDEO ---------- */
