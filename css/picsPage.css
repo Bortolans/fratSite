@@ -1,124 +1,158 @@
 
 /* ===========================================================
-
 Projeto: Site para empresa de Catering Fraternité Crêpe
 Nome do Arquivo: picsPage.css
 Autor: Thiago Bortolan de Oliveira
 Data Criação: 05/02/2026
-
 =========================================================== */
 
 
 /* ===========================================================
-ESTILO GERAL
+ESTILO GERAL DE LAYOUT
 =========================================================== */
 
 .layout {
-position: relative;
-flex: 1;
+    position: relative;
+    flex: 1;
 }
 
 main {
-position: relative;
-z-index: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 1.5rem;
+    position: relative;
+    z-index: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
 }
 
+
+/* ===========================================================
+CONTAINER DE MÍDIA (IMAGEM/VIDEO)
+=========================================================== */
+
 .containerPicVideo {
-gap: 20px;
+    gap: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    padding: 1rem 0;
+    border-radius: 10px;
+    background-color: #05050544;
 }
 
 .cardMidia {
-position: relative;
-overflow: hidden;
-width: 200px;
-aspect-ratio: 1 / 1.8;
-overflow: hidden;
-cursor: pointer;
-background: #000;
-border: 4px double #616161;
-border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 235px;
+    aspect-ratio: 1 / 2;
+    background: #000;
+    border: 1px solid #00000042;
 }
 
 .cardMidia img,
 .cardMidia video {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .cardMidia video {
-position: absolute;
-width: 100%;
-height: 100%;
+    position: absolute;
 }
 
+
+/* ===========================================================
+EFEITOS DE VÍDEO
+=========================================================== */
+
 .videoFeed {
-width: 100%;
-height: 100%;
-object-fit: cover;
-opacity: 1;
-transition: opacity 0.8s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.8s ease;
 }
 
 /* fade-out */
 .videoFeed.fade-out {
-opacity: 3;
+    opacity: 3;
 }
 
-/* ícone play */
+
+/* ===========================================================
+ÍCONES (PLAY / CLOSE)
+=========================================================== */
+
+.midiaWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.iconePlay,
+.btnClose {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    cursor: pointer;
+    color: #ff0000;
+}
+
 .iconePlay {
-display: flex;
-position: absolute;
-object-fit: contain;
-inset: 0;
-align-items: center;
-justify-content: center;
-background: rgba(0, 0, 0, 0.463);
-cursor: pointer;
+    inset: 0;
+    font-size: 3.3rem;
+    background: rgba(0, 0, 0, 0.656);
 }
 
-.iconePlay i {
-font-size: 3.3rem;
-color: #ff0000;
+.btnClose {
+    top: 0;
+    z-index: 20;
+    padding: 5px;
+    font-size: 2.2rem;
+    line-height: 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.656);
 }
+
+
+/* ===========================================================
+OVERLAY DE ZOOM
+=========================================================== */
 
 .zoomOverlay {
-position: fixed;
-inset: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.3s ease;
-background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .zoomOverlay.ativo {
-object-fit: none;
-opacity: 1;
-pointer-events: all;
+    object-fit: none;
+    pointer-events: all;
+    opacity: 1;
 }
 
 /* mídia em destaque */
-.zoomOverlay.ativo img, .zoomOverlay.ativo video {
-transform: scale(1);
+.zoomOverlay.ativo img,
+.zoomOverlay.ativo video {
+    transform: scale(1);
 }
 
-.zoomOverlay img, .zoomOverlay video {
-object-fit: contain;
-max-width: 90vw;
-max-height: 95vh;
-transition: transform 0.8s ease;
+.zoomOverlay img,
+.zoomOverlay video {
+    position: relative;
+    object-fit: contain;
+    max-width: 90vw;
+    max-height: 95vh;
+    transition: transform 0.8s ease;
 }
 
 .zoomOverlay img {
-border-radius: 25px;
+    border-radius: 25px;
 }
