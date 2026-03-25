@@ -93,7 +93,7 @@ function gerarThumb(src, cb) {
 ========================== */
 const feed = document.getElementById("feedMidia");
 
-midias.forEach(item => {
+midias.forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "cardMidia";
 
@@ -105,7 +105,7 @@ midias.forEach(item => {
         img.loading = "lazy";
 
         card.appendChild(img);
-        img.addEventListener("click", () => abrirZoomImg(img));
+        img.addEventListener("click", () => abrirZoom(index));
     }
 
     /* ---------- VÍDEO ---------- */
@@ -123,9 +123,7 @@ midias.forEach(item => {
         card.appendChild(img);
         card.appendChild(play);
 
-        card.addEventListener("click", () => {
-            abrirZoomVideo(item.src, item.label);
-        });
+        card.addEventListener("click", () => abrirZoom(index));
     }
 
     feed.appendChild(card);
