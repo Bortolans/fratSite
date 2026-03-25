@@ -10,90 +10,100 @@ Data Criação: 05/02/2026
 =========================================================== */
 
 
-function abrirZoomImg(elemento) {
+function abrirZoom(index) {
 
     const overlay = document.getElementById("zoomOverlay");
     overlay.innerHTML = "";
 
     const wrapper = document.createElement("div");
     wrapper.className = "midiaWrapper";
-
-    const img = document.createElement("img");
-    img.src = elemento.src;
-    img.alt = elemento.alt;
-
-    const btnClose = document.createElement("span");
-    btnClose.className = "btnClose";
-    btnClose.innerHTML = '<i class="bi bi-x-circle-fill"></i>';
-
-    btnClose.onclick = () => overlay.classList.remove("ativo");
-
-    wrapper.appendChild(img);
-    wrapper.appendChild(btnClose);
     overlay.appendChild(wrapper);
     overlay.classList.add("ativo");
 
-    fecharZoomSetup(overlay, img, btnClose);
-}
+    let currentIndex = index;
 
+    function renderMidia(){
+        wrapper.innerHTML = "";
 
-function abrirZoomVideo(src, label) {
+        const item = midias[currentIndex];
+        let midiaEl;
 
-    const overlay = document.getElementById("zoomOverlay");
-    overlay.innerHTML = "";
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "midiaWrapper";
-
-    const video = document.createElement("video");
-    video.src = src;
-    video.autoplay = true;
-    video.controls = false;
-    video.muted = false;
-    video.playsInline = true;
-    video.preload = "auto";
-    video.loop = true;
-    video.setAttribute("aria-label", label);
-    video.disablePictureInPicture = true;
-    video.controlsList = "nodownload noremoteplayback";
-
-    const btnClose = document.createElement("span");
-    btnClose.className = "btnClose";
-    btnClose.innerHTML = '<i class="bi bi-x-circle-fill"></i>';
-
-    btnClose.onclick = () => overlay.classList.remove("ativo");
-
-    wrapper.appendChild(video);
-    wrapper.appendChild(btnClose);
-    overlay.appendChild(wrapper);
-    overlay.classList.add("ativo");
-
-    fecharZoomSetup(overlay, video, btnClose);
-}
-
-
-function fecharZoomSetup(overlay, midia, btnClose) {
-
-    midia.addEventListener("click", e => e.stopPropagation());
-
-    function fechar() {
-        if (midia.tagName === "VIDEO") {
-            midia.pause();
-            midia.currentTime = 0;
+        if (item.tipo === "foto") {
+            midiaEl = document.createElement("img");
+            midiaEl.src = item.src;
+            midiaEl.alt = item.alt;
+        } else if (item.tipo === "video") {
+            midiaEl = document.createElement("video");
+            midiaEl.src = item.src;
+            midiaEl.autoplay = true;
+            midiaEl.controls = false;
+            midiaEl.muted = false;
+            midiaEl.playsInline = true;
+            midiaEl.preload = "auto";
+            midiaEl.loop = true;
+            midiaEl.setAttribute("aria-label", item.label);
+            midiaEl.disablePictureInPicture = true;
+            midiaEl.controlsList = "nodownload noremoteplayback";
         }
-        overlay.classList.remove("ativo");
-        setTimeout(() => overlay.innerHTML = "", 300);
+
+
+        const btnPrev = document.createElement("span");
+        btnPrev.className = "btnPrev";
+        btnPrev.innerHTML = '<i class="bi bi-arrow-left-short"></i>'
+        btnPrev.onclick = (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + midias.length) % midias.length;
+            renderMidia();
+        };
+
+        const btnNext = document.createElement("span");
+        btnNext.className = "btnNext";
+        btnNext.innerHTML = '<i class="bi bi-arrow-right-short"></i>';
+        btnNext.onclick = (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % midias.length;
+            renderMidia();
+        }
+
+        const btnClose = document.createElement("span");
+        btnClose.className = "btnClose";
+        btnClose.innerHTML = '<i class="bi bi-x"></i>';
+        btnClose.onclick = (e) => {
+            e.stopPropagation();
+            fechar();
+        };
+        
+        wrapper.appendChild(midiaEl);
+        wrapper.appendChild(btnPrev);
+        wrapper.appendChild(btnNext);
+        wrapper.appendChild(btnClose);
     }
 
-    overlay.onclick = fechar;
-    btnClose.onclick = fechar;
 
-    document.addEventListener("keydown", function esc(e) {
-        if (e.key === "Escape") {
-            fechar();
-            document.removeEventListener("keydown", esc);
+    function fechar() {
+            const v = wrapper.querySelector("video");
+            if (v) {
+                v.pause();
+                v.currentTime = 0;
+            }
+            overlay.classList.remove("ativo");
+            setTimeout(() => overlay.innerHTML = "", 300);
         }
-    });
+
+        // Fecha clicando fora
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) fechar();
+        });
+
+        // Fecha com ESC
+        document.addEventListener("keydown", function esc(e) {
+            if (e.key === "Escape") {
+                fechar();
+                document.removeEventListener("keydown", esc);
+            }
+        });
+    renderMidia();
 }
+
 
 
