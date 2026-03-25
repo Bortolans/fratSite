@@ -80,7 +80,7 @@ EFEITOS DE VÍDEO
 
 
 /* ===========================================================
-ÍCONES (PLAY / CLOSE)
+ÍCONES (PLAY / CLOSE / NEXT / PREV)
 =========================================================== */
 
 .midiaWrapper {
@@ -89,32 +89,48 @@ EFEITOS DE VÍDEO
 }
 
 .iconePlay,
-.btnClose {
+.btnClose, .btnPrev, .btnNext {
     display: flex;
     position: absolute;
-    justify-content: center;
     align-items: center;
     object-fit: contain;
     cursor: pointer;
-    color: #ff0000;
 }
 
 .iconePlay {
+    justify-content: center;
     inset: 0;
     font-size: 3.3rem;
     background: rgba(0, 0, 0, 0.656);
+    color: #ff0000;
 }
 
-.btnClose {
-    top: 0;
+.btnPrev, .btnNext, .btnClose {
     z-index: 20;
     padding: 5px;
     font-size: 2.2rem;
     line-height: 0;
+    color: rgb(255, 255, 255);
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 0.656);
+    background-color: rgba(0, 0, 0, 0.49);
 }
 
+.btnNext, .btnPrev {
+    top: 50%;
+}
+
+.btnClose {
+    top: 5px;
+    left: 5px;
+}
+
+.btnPrev {
+    left: 5px;
+}
+
+.btnNext {
+    right: 5px;
+}
 
 /* ===========================================================
 OVERLAY DE ZOOM
