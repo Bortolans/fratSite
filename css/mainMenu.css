@@ -109,8 +109,8 @@ header .navbar {
   font-size: 15px;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #fa4032 !important;
+#menuNav .nav-item {
+  text-align: center !important;
 }
 
 .navbar-toggler {
@@ -185,7 +185,7 @@ BOTÃO WHATSAPP FIXO
   height: clamp(50px, 6vw, 75px);
   position: fixed;
   bottom: 20px;
-  right: 2rem;
+  right: 1.5rem;
   border-radius: 100%;
   cursor: pointer;
   box-shadow: 0 0 2px rgba(29,233,77,.3);
@@ -197,12 +197,25 @@ BOTÃO WHATSAPP FIXO
   border-radius: 50%;
 }
 
-.whatsapp-float:hover {
-  background-color: #87f78b;
-  transition: 400ms;
-  padding: 5px;
-}
 
+/* HOVER */
+@media (hover: hover) and (pointer: fine) {
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #fa4032 !important;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #87f78b;
+    transition: 400ms;
+    padding: 5px;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+}
 
 /* ===========================================================
 RESPONSIVIDADE
@@ -214,7 +227,7 @@ RESPONSIVIDADE
 
 /* === Desktop / Laptop === */
 @media (min-width: 992px) and 
-       (max-width: 1199px) {
+  (max-width: 1199px) {
 
   .navbar-brand { margin: 0 1.5rem; }
 
@@ -225,8 +238,21 @@ RESPONSIVIDADE
 
 
 /* === Tablet / Laptop === */
+@media (hover: hover) and (pointer: fine) 
+  and (min-width: 822px) and (max-width: 991px) {
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+}
+
 @media (min-width: 822px) and 
-       (max-width: 991px) {
+  (max-width: 991px) {
 
   .navbar > .container {
     position: relative;
@@ -244,7 +270,82 @@ RESPONSIVIDADE
   .navbar-toggler {
     position: absolute;
     right: 1rem;
-    z-index: 2;
+    z-index: 0;
+    border: none;
+  }
+
+  #menuNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 90%;
+    max-width: 255px;
+    background: #000000e2;
+    padding-top: 5.9rem;
+    padding-bottom: 1rem;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 1050;
+    box-shadow: -10px 0 20px rgba(0,0,0,.35);
+    overflow-y: auto;
+  }
+
+  #menuNav.show { transform: translateX(0); }
+
+  #menuNav .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #menuNav .nav-item {
+    width: 70%;
+    max-width: 380px;
+    border-bottom: 1px solid rgba(255,255,255,.414);
+  }
+
+  #menuNav .nav-link {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+
+/* === Tablet → Mobile grande === */
+@media (hover: hover) and (pointer: fine) 
+  and (min-width: 501px) and (max-width: 821px) {
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+}
+
+@media (min-width: 501px) and 
+  (max-width: 821px) {
+
+  .navbar > .container {
+    position: relative;
+    justify-content: center;
+    padding: 0.2rem;
+  }
+
+  .navbar-brand { 
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    margin: 0 !important; 
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    z-index: 0;
     border: none;
   }
 
@@ -284,86 +385,6 @@ RESPONSIVIDADE
     padding: 1rem 0;
   }
 
-  #menuNav .nav-item:hover {
-    width: 80%;
-    background-color: #bebebe6c;
-  }
-
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff !important;
-  }
-}
-
-
-/* === Tablet → Mobile grande === */
-@media (min-width: 501px) and 
-       (max-width: 821px) {
-
-  .navbar > .container {
-    position: relative;
-    justify-content: center;
-    padding: 0.2rem;
-  }
-
-  .navbar-brand { 
-    display: flex;
-    justify-content: center;
-    z-index: 0;
-    margin: 0 !important; 
-  }
-
-  .navbar-toggler {
-    position: absolute;
-    right: 1rem;
-    z-index: 2;
-    border: none;
-  }
-
-  #menuNav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100dvh;
-    width: 90%;
-    max-width: 255px;
-    background: #000000e2;
-    padding-top: 5.9rem;
-    padding-bottom: 1rem;
-    transform: translateX(100%);
-    transition: transform .25s ease;
-    z-index: 1050;
-    box-shadow: -10px 0 20px rgba(0,0,0,.35);
-    overflow-y: auto;
-  }
-
-  #menuNav.show { transform: translateX(0); }
-
-  #menuNav .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  #menuNav .nav-item {
-    width: 70%;
-    max-width: 380px;
-    border-bottom: 1px solid rgb(255,255,255);
-  }
-
-  #menuNav .nav-link {
-    font-size: 1rem;
-    padding: 1rem 0;
-  }
-
-  #menuNav .nav-item:hover {
-    width: 80%;
-    background-color: #bebebe6c;
-  }
-
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff !important;
-  }
-
   .navbar-brand { margin: 0 auto; }
 
   .social-links {
@@ -385,6 +406,19 @@ RESPONSIVIDADE
 
 
 /* === Mobile === */
+@media (hover: hover) and (pointer: fine) 
+  and (max-width: 500px) {
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+  #menuNav .nav-item:hover {
+    width: 80%;
+    background-color: #bebebe6c;
+  }
+}
+
 @media (max-width: 500px) {
 
   .navbar > .container {
@@ -403,7 +437,7 @@ RESPONSIVIDADE
   .navbar-toggler {
     position: absolute;
     right: 1rem;
-    z-index: 2;
+    z-index: 0;
     border: none;
   }
 
@@ -435,21 +469,12 @@ RESPONSIVIDADE
   #menuNav .nav-item {
     width: 70%;
     max-width: 380px;
-    border-bottom: 1px solid rgb(255,255,255);
+    border-bottom: 1px solid rgba(255,255,255,.414);
   }
 
   #menuNav .nav-link {
     font-size: 1rem;
     padding: 1rem 0;
-  }
-
-  #menuNav .nav-item:hover {
-    width: 80%;
-    background-color: #bebebe6c;
-  }
-
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff !important;
   }
 
   .footer-row {
@@ -473,12 +498,20 @@ RESPONSIVIDADE
   }
 
   .whatsapp-float {
-    right: 1.2rem;
+    right: 0.9rem;
   }
 }
 
 
 /* === Mobile muito pequeno === */
+@media (hover: hover) and (pointer: fine) 
+  and (max-width: 380px) {
+
+  #menuNav .nav-item:hover {
+    width: 95%;
+  }
+}
+
 @media (max-width: 380px) {
 
   #menuNav {
@@ -492,8 +525,6 @@ RESPONSIVIDADE
   #menuNav .nav-item { width: 80%; }
 
   #menuNav .nav-link { font-size: 1rem; }
-
-  #menuNav .nav-item:hover { width: 95%; }
 
   .navbar-toggler { right: 5px; }
 
@@ -518,6 +549,6 @@ RESPONSIVIDADE
   }
 
   .whatsapp-float {
-    right: 1.2rem;
+    right: 0.7rem;
   }
 }
