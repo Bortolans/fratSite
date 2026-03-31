@@ -16,19 +16,6 @@ body {
 color: #000;
 }
 
-main {
-animation: fadeIn 1s ease-in;
-}
-
-/* ===========================================================
-ANIMAÇÃO SUAVE NA ENTRADA
-=========================================================== */
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(150px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-
 /* ===========================================================
 CORPO / TÍTULOS / CONTEÚDO HISTÓRICO - LAYOUT
 =========================================================== */
@@ -42,7 +29,7 @@ font-style: oblique;
 
 .titulo2 {
 text-align: center;
-font-size: 1.7rem;
+font-size: 2.5rem;
 margin-bottom: 3rem;
 color: #333;
 font-family: "Garamond", serif;
@@ -53,6 +40,7 @@ font-style: oblique;
 .conteudoHistorico {
 display: flex;
 justify-content: center;
+align-items: center;
 margin-bottom: 4rem;
 }
 
@@ -60,18 +48,16 @@ margin-bottom: 4rem;
 width: 100%;
 max-width: 1200px;
 column-count: 2;
-column-gap: 4rem;
-margin: 0;
+column-gap: rem;
+margin: 0 auto;
 padding: 0;
-justify-content: center;
-align-items: center;
 font-family: "Garamond", serif;
 background-color: rgb(255, 255, 255);
 }
 
 .textoHistorico li {
 list-style: none;
-padding: 0.5rem;
+padding: 1rem;
 break-inside: avoid;
 font-size: 1.3rem;
 }
@@ -95,7 +81,8 @@ margin-right: 1.5rem;
 }
 
 .textoHistorico img {
-width: 50%;
+display: flex;
+width: 100%;
 max-width: 180px;
 border-radius: 40px;
 box-shadow: 0 4px 10px rgba(0,0,0,0.6);
@@ -106,100 +93,180 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 RESPONSIVIDADE
 =========================================================== */
 
-
-/* ======== DESKTOP ======== */
-@media (min-width: 1200px) {
-
-
-}
-
-
-/* ======== DESKTOP / LAPTOP ======== */
-@media (min-width: 900px) and 
-      (max-width: 1199px) {
-
-
-}
-
-
 /* ======== TABLET / LAPTOP ======== */
 @media (min-width: 822px) and 
-      (max-width: 991px) {
+  (max-width: 991px) {
 
-    .textoContainer {
-      column-gap: 2rem !important;
-    }
+  .textoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-left: 1px solid rgb(130, 130, 130);
+    border-right: 1px solid rgb(130, 130, 130);
+    border-bottom: 1px solid rgb(130, 130, 130);
+  }
 
-    .textoHistorico img {
-      width: 50%;
-    }
+  .textoHistorico h3 {
+    margin-top: 1.5rem;
+  }
 
+  .textoHistorico p {
+    margin-top: 1rem;
+  }
+
+  .textoHistorico img {
+    width: 100%;
+    max-width: 250px;
+  }
 }
-
 
 /* ======== TABLET ======== */
 @media (min-width: 750px) and
-      (max-width: 821px) {
+  (max-width: 821px) {
 
-    .textoContainer {
-      width: 97%;
-      column-gap: 2rem !important;
-    }
+  .textoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 15px;
+    width: 100%;
+    border-radius: 20px;
+    border-left: 1px solid rgb(130, 130, 130);
+    border-right: 1px solid rgb(130, 130, 130);
+    border-bottom: 1px solid rgb(130, 130, 130);
+  }
 
+  .textoHistorico h3 {
+    margin-top: 1.5rem;
+  }
+
+  .textoHistorico p {
+    margin-top: 1rem;
+  }
+
+  .textoHistorico img {
+    width: 100%;
+    max-width: 230px;
+  }
 }
-
 
 /* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
 @media (min-width: 501px) and
-      (max-width: 749px) {
+  (max-width: 749px) {
 
-    .textoContainer {
-      width: 100%;
-      column-count: 1 !important;
-      border-left: 1px solid rgb(130, 130, 130);
-      border-right: 1px solid rgb(130, 130, 130);
-      border-bottom: 1px solid rgb(130, 130, 130);
-    }
+  .titulo1 {
+    font-size: 2.5rem;
+  }
 
-    .textoHistorico li {
-      padding: 1rem;
-    }
+  .titulo2 {
+    font-size: 2rem;
+  }
 
-    .textoHistorico img {
-      width: 50%;
-    }
+  .textoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 15px;
+    width: 100%;
+    border-radius: 20px;
+    border-left: 1px solid rgb(130, 130, 130);
+    border-right: 1px solid rgb(130, 130, 130);
+    border-bottom: 1px solid rgb(130, 130, 130);
+  }
+
+  .textoHistorico li {
+    padding: 1rem;
+  }
+
+  .textoHistorico img {
+    width: 100%;
+    max-width: 210px;
+  }
 }
-
 
 /* ======== MOBILE PEQUENO ======== */
 @media screen and (max-width: 500px) {
 
-    .titulo1 {
-      font-size: 2.5rem;
-    }
+  .titulo1 {
+    font-size: 2.2rem;
+  }
 
-    .textoContainer {
-      width: 100%;
-      column-count: 1 !important;
-      border-left: 1px solid rgb(130, 130, 130);
-      border-right: 1px solid rgb(130, 130, 130);
-      border-bottom: 1px solid rgb(130, 130, 130);
-    }
+  .titulo2 {
+    font-size: 1.5rem;
+  }
 
-    .textoHistorico li {
-      margin-right: 1rem;
-      margin-top: 1rem;
-    }
+  .textoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 2rem;
+    gap: 15px;
+    width: 100%;
+    border-radius: 20px;
+    border-left: 1px solid rgb(130, 130, 130);
+    border-right: 1px solid rgb(130, 130, 130);
+    border-bottom: 1px solid rgb(130, 130, 130);
+  }
 
-    .textoHistorico h3 {
-      font-size: 1.4rem;
-    }
+  .textoHistorico li {
+    text-align: center;
+  }
 
-    .textoHistorico p {
-      font-size: 1.2rem;
-    }
+  .textoHistorico h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
 
-    .textoHistorico img {
-      width: 52%;
-    }
+  .textoHistorico p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+
+  .textoHistorico img {
+    width: 100%;
+    max-width: 290px;
+    margin-bottom: 1rem;
+  }
+
+  .textoHistorico li:nth-child(odd) img,
+  .textoHistorico li:nth-child(even) img {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+/* ======== MOBILE MUITO PEQUENO ======== */
+@media screen and (max-width: 430px) {
+
+  .textoHistorico h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .textoHistorico p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .textoHistorico img {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .textoHistorico li:nth-child(odd) img,
+  .textoHistorico li:nth-child(even) img {
+    float: none;
+    margin: 0 auto;
+  }
 }
