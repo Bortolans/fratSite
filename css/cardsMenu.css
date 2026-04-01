@@ -1,0 +1,125 @@
+
+/* ===========================================================
+
+Projeto: Site para empresa de Catering Fraternité Crêpe
+Nome do Arquivo: cardsMenu.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 27/11/2025
+
+=========================================================== */
+
+
+/* ===========================================================
+ANIMAÇÕES E ESTILO GLOBAL
+=========================================================== */
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px); 
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  70% {
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  70% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  90% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ============================
+IMAGENS DO TOPO
+============================= */
+.holder-sections {
+  will-change: transform, opacity;
+  padding: 1rem;
+  animation: bounceInLeft 550ms ease-in;
+}
+
+.holder-imagem {
+  text-align: center;
+  max-width: 220px;
+}
+
+.holder-imagem img,
+.holder-imagem .img-fluid {
+  width: 50%;
+  border-radius: 14px;
+  border: 0.5px solid rgba(198, 198, 198, 0.685);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow .2s ease;
+}
+
+.tem-hover .holder-imagem:hover img,
+.tem-hover .holder-imagem:hover .img-fluid {
+  transform: scale(1.1);
+  border: 1px solid rgb(255, 119, 119);
+  box-shadow: 0 12px 25px rgb(255, 0, 0);
+}
+
+.holder-imagem h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgb(136, 2, 2);
+}
+
+.tem-hover .holder-imagem:hover h2 {
+  color: rgb(255, 24, 24);
+}
+
+/* Linha decorativa */
+.section-divider {
+  will-change: transform, opacity;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: bounceInRight 700ms ease-in;
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 7px;
+  background-image: url("../img/index/bandeiraFrench.webp") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem auto 0;
+  border-radius: 10px;
+  border: 0.5px solid rgb(148, 148, 148);
+}
+
+
