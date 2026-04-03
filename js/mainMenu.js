@@ -34,3 +34,9 @@ function chamarAtencao() {
 
 setTimeout(chamarAtencao, 3000);
 setInterval(chamarAtencao, 10000);
+
+
+/* ============ CONTROLE HOVER holder-sections============ */
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.body.classList.add("tem-hover");
+}

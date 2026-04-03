@@ -33,7 +33,3 @@ if (fotoSlide) {
         fotoSlide.src = imagens[indexSlide];
     }, 2500);
 }
-
-if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-    document.body.classList.add("tem-hover");
-}
