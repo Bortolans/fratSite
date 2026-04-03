@@ -65,24 +65,25 @@ IMAGENS DO TOPO
   will-change: transform, opacity;
   padding: 1rem;
   animation: bounceInLeft 550ms ease-in;
+  gap: 3rem;
+
 }
 
 .holder-imagem {
+  width: fit-content;
   text-align: center;
-  max-width: 220px;
 }
 
-.holder-imagem img,
-.holder-imagem .img-fluid {
-  width: 50%;
+.holder-imagem img {
+  width: 100%;
+  max-width: 110px;
   border-radius: 14px;
   border: 0.5px solid rgba(198, 198, 198, 0.685);
   box-shadow: 0 8px 25px rgba(0,0,0,0.18);
   transition: transform 0.3s ease, box-shadow .2s ease;
 }
 
-.tem-hover .holder-imagem:hover img,
-.tem-hover .holder-imagem:hover .img-fluid {
+.tem-hover .holder-imagem a:hover img {
   transform: scale(1.1);
   border: 1px solid rgb(255, 119, 119);
   box-shadow: 0 12px 25px rgb(255, 0, 0);

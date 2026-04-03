@@ -41,11 +41,10 @@ body::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 726px;
+  left: 3%;
+  width: 350px;
   height: 100%;
-  background: linear-gradient(to left, #ffffff, #f76a6a, #106bf3), 
-              url(../img/bastille-day-fireworks-celebration-vector-15440995.avif)
+  background: url(../img/fraterniteFoto83.jpeg)
               left center / contain no-repeat;
   background-blend-mode: overlay;
   pointer-events: none;
