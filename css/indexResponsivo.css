@@ -154,8 +154,8 @@ RESPONSIVIDADE
     .service-section {
         padding: 0.5rem;
     }
-    .home-sections { gap: 1rem; }
 
+    .home-sections { gap: 1rem; }
     .home-card img {width: 60% !important;}
 
     h3 {font-size: 1.6rem !important;}
