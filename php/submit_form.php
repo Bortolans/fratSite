@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $telefone = $_POST["telefone"] ?? '';
     $email = $_POST["email"] ?? '';
     $idade = $_POST["idade"] ?? '';
-    $cardapio = $_POST["cardapio"] ?? '';
     $cep = $_POST["cep"] ?? '';
     $rua = $_POST["rua"] ?? '';
     $numeroCasa = $_POST["numeroCasa"] ?? '';
     $bairro = $_POST["bairro"] ?? '';
     $cidade = $_POST["cidade"] ?? '';
     $estado = $_POST["estado"] ?? '';
+    $cardapio = $_POST["cardapio"] ?? '';
     $data = $_POST["data"] ?? '';
     $adultos = $_POST["adultos"] ?? '';
     $criancas = $_POST["criancas"] ?? '';
@@ -69,13 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "Telefone: $telefone\n" .
         "E-mail: $email\n" .
         "Idade: $idade\n" .
-        "Cardápio escolhido: $cardapio\n" .
         "CEP: $cep\n" .
         "Rua: $rua\n" .
         "Número da residência: $numeroCasa\n" .
         "Bairro: $bairro\n" .
         "Cidade: $cidade\n" .
         "Estado: $estado\n" .
+        "Cardápio escolhido: $cardapio\n" .
         "Data do evento: $data\n" .
         "Adultos: $adultos\n" .
         "Crianças: $criancas\n" .
