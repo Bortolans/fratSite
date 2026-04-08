@@ -19,8 +19,16 @@ document.getElementById('formOrcamento').addEventListener('submit', function(e) 
     e.preventDefault();
     // Lista de todos os campos do formulário
     const campos = [
-        'nome','sobrenome','telefone','email','idade','cardapio','cep','rua','numeroCasa',
-        'bairro','cidade','estado','data','adultos','criancas','garcom','pratos','copeira','bio','referencia','terms_and_conditions'
+        'nome', 'sobrenome',
+        'telefone', 'email',
+        'idade', 'cep', 'rua',
+        'numeroCasa', 'bairro',
+        'cidade', 'estado', 
+        'cardapio', 'data', 'adultos',
+        'criancas', 'garcom',
+        'pratos', 'copeira',
+        'bio', 'referencia',
+        'terms_and_conditions'
     ];
 
     // Salva valores no localStorage
@@ -36,7 +44,7 @@ document.getElementById('formOrcamento').addEventListener('submit', function(e) 
         const el = document.getElementById(campo);
         if (el) {
             if(el.type === "checkbox"){
-                localStorage.setItem(campo, el.checked ? "sim" : "não");
+                localStorage.setItem(campo, el.checked ? "Sim" : "Não");
             } else {
                 localStorage.setItem(campo, el.value);
             }

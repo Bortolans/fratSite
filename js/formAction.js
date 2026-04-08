@@ -19,8 +19,16 @@ window.addEventListener('load', function() {
 
     // Lista de todos os campos do formulário
     const campos = [
-        'nome','sobrenome','email','telefone','idade','cardapio','cep','rua','numeroCasa',
-        'bairro','cidade','estado','data','adultos','criancas','garcom','pratos','copeira','bio','referencia','terms_and_conditions'
+        'nome', 'sobrenome',
+        'telefone', 'email',
+        'idade', 'cep', 'rua',
+        'numeroCasa', 'bairro',
+        'cidade', 'estado', 
+        'cardapio', 'data', 'adultos',
+        'criancas', 'garcom',
+        'pratos', 'copeira',
+        'bio', 'referencia',
+        'terms_and_conditions'
     ];
 
     // Dicionário para mostrar nomes amigáveis na tabela
@@ -30,13 +38,13 @@ window.addEventListener('load', function() {
         email: "E-mail:",
         telefone: "Telefone:",
         idade: "Idade:",
-        cardapio: "Cardápio:",
         cep: "CEP:",
         rua: "Rua:",
-        numeroCasa: "Número da residência:",
+        numeroCasa: "Nº residência:",
         bairro: "Bairro:",
         cidade: "Cidade:",
         estado: "Estado:",
+        cardapio: "Cardápio:",
         data: "Data:",
         adultos: "Adultos:",
         criancas: "Crianças:",
@@ -50,7 +58,7 @@ window.addEventListener('load', function() {
 
     // Monta a tabela
     let tabela = "<table id='tabela' class='tabela'>";
-    tabela += "<tr><th>Campo</th><th>Dados</th></tr>";
+    tabela += "<tr><th class='titulo1'>Campo</th><th class='titulo2'>Dados</th></tr>";
 
     campos.forEach(campo => {
         // Pega o valor do localStorage
