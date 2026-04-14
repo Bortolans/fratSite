@@ -19,22 +19,17 @@ font-style: normal;
 }
 
 h1, .text-center p {
-margin-top: 1em;
 text-align: center;
 }
 
 h1 {
-margin-top: 1rem;
 font-size: 2.7rem;
-}
-
-.servicos label {
-line-height: 0px;
 }
 
 .text-center p {
 font-size: 20px;
 padding: 10px;
+margin-bottom: 2rem;
 }
 
 
@@ -43,7 +38,6 @@ LEGENDA
 =========================================================== */
 legend {
 text-align: center;
-margin-bottom: 1rem;
 padding: 1rem;
 }
 
@@ -51,8 +45,9 @@ padding: 1rem;
 /* ===========================================================
 FORMULÁRIO (container geral)
 =========================================================== */
-.sectionForm {
-max-width: 800px;
+.section-form {
+width: 100%;
+max-width: 900px;
 background: white;
 margin: 0 auto;
 margin-bottom: 2rem;
@@ -61,17 +56,18 @@ border-radius: 5px;
 
 form {
 width: 100%;
+max-width: 500px;
 margin: 0 auto;
 padding-bottom: 2rem;
 }
 
 fieldset {
-border: none;
-padding: 2rem 0;
-border-bottom: 1px solid rgba(255, 0, 0, 0.582);
 display: block;
 width: 100%;
-text-align: center;
+text-align: left;
+padding: 2rem 0;
+border: none;
+border-bottom: 1px solid rgba(255, 0, 0, 0.582);
 }
 
 fieldset:last-of-type {
@@ -89,7 +85,7 @@ width: 100%;
 border-radius: 10px;
 font-size: 15px;
 border: 1px solid rgba(73, 72, 72, 0.5) !important;
-margin-top: 6px;
+margin-top: 1px;
 }
 
 input {
@@ -98,7 +94,7 @@ color: #211f1f;
 
 .idade {
 max-width: 80px;
-text-align: center;
+text-align: left;
 }
 
 
@@ -106,12 +102,11 @@ text-align: center;
 SEÇÃO DE CARDÁPIOS
 =========================================================== */
 .cardapios {
-width: 100%;
-max-width: 400px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-gap: 1rem;
+width: 100%;
+max-width: 400px;
 margin: 0 auto;
 }
 
@@ -133,19 +128,16 @@ margin: 0;
 vertical-align: middle;
 }
 
+.form-menu .adultos,
+.form-menu .criancas {
+max-width: 85px;
+text-align: left;
+}
+
 
 /* ===========================================================
 INFORMAÇÕES DO EVENTO
 =========================================================== */
-.infoevento {
-display: flex;
-gap: 16px;
-}
-
-.infoevento label {
-flex: 1;
-}
-
 .endereco input {
 background-color: #f2f2f7;
 }
@@ -156,18 +148,11 @@ background-color: #f2f2f7;
 color: #211f1f;
 }
 
-.adultos,
-.criancas {
-max-width: 90px;
-text-align: center;
-font-size: smaller;
-}
-
 
 /* ===========================================================
 SERVIÇOS ADICIONAIS
 =========================================================== */
-.servicos {
+.services {
 display: flex;
 flex-direction: column;
 gap: 15px;
@@ -175,8 +160,6 @@ margin: 20px 0;
 }
 
 .selector-row {
-display: flex;
-justify-content: space-between;
 align-items: center;
 }
 
@@ -186,13 +169,17 @@ font-weight: bold;
 }
 
 .selector {
-width: 110px;
-padding: 3px;
+width: 100%;
+max-width: 110px;
 font-size: 14px;
 }
 
 input[type="date"] {
 width: 60%;
+}
+
+.services label {
+line-height: 0px;
 }
 
 
@@ -243,11 +230,11 @@ background-color: rgb(196, 194, 194);
 /* ===========================================================
 LINKS INLINE
 =========================================================== */
-a {
+.terms_and_conditions {
 text-decoration: none;
 }
 
-a:hover {
+.terms_and_conditions:hover {
 text-decoration: underline;
 }
 
@@ -255,47 +242,121 @@ text-decoration: underline;
 /* ===========================================================
 RESPONSIVIDADE
 =========================================================== */
-@media (min-width: 768px) {
-form {
-max-width: 650px;
-}
 
-.cardapios {
-max-width: 500px;
-}
-
-.selector-row {
-gap: 2rem;
-}
-
-input[type="date"] {
-width: 70%;
-}
-}
+/* ======== DESKTOP / LAPTOP ======== */
+@media (min-width: 993px) and 
+       (max-width: 1199px) {
 
 
-@media (min-width: 992px) {
-form {
-max-width: 500px;
 }
 
-fieldset {
-text-align: left;
-padding-left: 1rem;
-padding-right: 1rem;
+/* ======== TABLET ======== */
+@media (min-width: 767px) and 
+    (max-width: 992px) {
+    
+    .section-form {
+        width: 90%;
+    }
+
+    .cardapios {
+        justify-content: flex-start;
+        max-width: 600px;
+    }
+
+    .selector-row {
+        justify-content: space-between;
+        gap: 5rem;
+    }
+
+    input[type="submit"] {
+        width: 250px;
+    }
 }
 
-.cardapios {
-justify-content: flex-start;
-max-width: 600px;
+
+/* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
+@media (min-width: 501px) and 
+    (max-width: 768px) {
+
+    .section-form {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .cardapios {
+        justify-content: flex-start;
+        max-width: 500px;
+    }
+
+    .form-menu {
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .attendee-group {
+        max-width: 250px;
+    }
+
+    input[type="date"] {
+        width: 70%;
+    }
 }
 
-.selector-row {
-justify-content: space-between;
-gap: 5rem;
+
+/* ======== MOBILE PEQUENO ======== */
+@media screen and (max-width: 500px) {
+
+    .section-form {
+        width: 100%;
+        padding: 1rem;
+        margin: auto 0;
+    }
+
+    .cardapios {
+        justify-content: flex-start;
+        max-width: 400px;
+    }
+
+    .form-menu {
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-input[type="submit"] {
-width: 250px;
-}
+
+/* ======== MOBILE MUITO PEQUENO ======== */
+@media screen and (max-width: 448px) {
+
+
+    .cardapios label {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 2px;
+        padding: 7px 9rem;
+        font-size: 18px;
+    }
+
+    .section-services {
+        gap: 1rem;
+    }
+
+    .services {
+        margin-top: 6rem;
+    }
+
+    .selector-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+
+    .selector {
+        width: 100%;
+        max-width: 100px;
+        margin-bottom: 1rem;
+    }
 }
