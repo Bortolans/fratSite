@@ -1,0 +1,220 @@
+
+/* ===========================================================
+
+Projeto: Site para empresa de Catering Fraternité Crêpe
+Nome do Arquivo: cardapios.css
+Autor: Thiago Bortolan de Oliveira
+Data Criação: 15/04/2026
+
+=========================================================== */
+
+/* ===========================================================
+ANIMAÇÕES E ESTILO GLOBAL
+=========================================================== */
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+}
+
+@keyframes slideOutLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0); }
+    to   { transform: translateX(100%); }
+}
+
+
+/* ===========================================================
+MODAL
+=========================================================== */
+#modal {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: 0.3s;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#modal.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-conteudo {
+    width: 90%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    overflow-y: auto;
+    will-change: transform, opacity;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+
+/* ================= BOTÕES ================= */
+.btnClose, .btnPrev, .btnNext {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(250, 69, 69, 0.389);
+    will-change: transform, opacity;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnClose:hover,
+.btnPrev:hover,
+.btnNext:hover {
+    background: rgba(255, 0, 0, 0.612);
+}
+
+.btnClose {
+    width: 50px;
+    height: 50px;
+    top: 2rem;
+    right: 16%;
+}
+
+.btnNext, .btnPrev {
+    width: 50px;
+    height: 150px;
+}
+
+.btnPrev {
+    left: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btnNext {
+    right: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.quote-btn {
+  margin: 1.5rem auto;
+  width: auto;
+  max-width: 320px;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+/* ================= SLIDE ================= */
+.slide-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide-enter-right {
+    animation: slideInRight 0.3s ease forwards;
+}
+
+.slide-enter-left {
+    animation: slideInLeft 0.3s ease forwards;
+}
+
+.slide-exit-left {
+    animation: slideOutLeft 0.3s ease forwards;
+}
+
+.slide-exit-right {
+    animation: slideOutRight 0.3s ease forwards;
+}
+
+
+/* ===========================================================
+TEXT
+=========================================================== */
+.menu-marselha {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 3rem;
+}
+
+.section-description {
+    text-align: center;
+    border-bottom: 1px solid rgb(198, 2, 2);
+}
+
+.menu-marselha h2 {
+    color: #fa4032;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.description {
+    margin-bottom: 2rem;
+}
+
+.menu-marselha h3, .menu-marselha h4 {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1px;
+    text-align: left;
+}
+
+.menu-marselha h3 {
+    color: #ff0101;
+    margin-top: 2rem;
+}
+
+.menu-marselha h4 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.menu-description-marselha {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.menu-marselha ul {
+    margin: auto 0;
+    text-align: left;
+}
+
+.menu-marselha li {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
