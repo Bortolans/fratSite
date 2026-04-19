@@ -21,6 +21,7 @@ Autor: Thiago Bortolan de Oliveira
     <link rel="stylesheet" href="css/mainMenu.css">
     <link rel="stylesheet" href="css/cardsMenu.css">
     <link rel="stylesheet" href="css/cardapioPage.css">
+    <script defer src="js/modalCardapio.js"></script>
     <script defer src="js/mainMenu.js"></script>
 </head> 
 
@@ -77,9 +78,9 @@ Autor: Thiago Bortolan de Oliveira
                 <div class="menu-wrapper">
                     
                     <div class="menu-description container">
-                        <h1 class="animate__animated animate__slideInLeft">Cardápios</h1>
+                        <h1 class="animate__animated animate__fadeIn">Cardápios</h1>
                         <div class="menu-blocoTexto">
-                            <p class="animate__animated animate__zoomIn">
+                            <p class="animate__animated animate__fadeIn">
                                 Os cardápios da Fraternité Crêpe estão com novos sabores! Os crepes estão 
                                 ainda mais requintados para agradar os paladares mais gourmets 
                                 e também ganharam ingredientes que seguem a tendência da culinária saudável.
@@ -88,76 +89,91 @@ Autor: Thiago Bortolan de Oliveira
                                 além de um cafezinho saboroso com petit four de encerramento.
                             </p>
                             <div class="container-fluid-cadapios">
-                                <img alt="menu-descriptionImg" src="img/menu_Page/fraterniteFoto38.jpg" class="img-fluid description-img">
+                                <img alt="menu-descriptionImg" src="img/menu_Page/fraterniteFoto00.jpeg" class="img-fluid description-img">
                                 <video class="video-card" autoplay muted loop playsinline>
                                     <source src="img/menu_Page/fraterniteVideo12.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="menu-cards container">
+            <section class="menu-cards container">
+                <div class="menu-card">
+                    <h2>Cardápio Marselha</h2>
+                    <img src="img/menu_Page/cardapioMarselha.jpg"
+                        alt="foto-cardapio-Marselha"
+                        class="img-fluid"
+                        onclick="abrirModal(0)"
+                        style="cursor: pointer;">
+                    <p>
+                        Novo cardápio Marselha! Destaque para os crepes de presunto e tomate; 
+                        frango e bacon; três queijos; e os clássicos de chocolate com morango; 
+                        e doce de leite com banana.
+                    </p>
+                    <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
+                </div>
 
-                        <div class="menu-card">
-                            <h2>Cardápio Marselha</h2>
-                            <a href="cardapios/" target="_blank" class="d-flex justify-content-center">
-                                <img src="img/menu_Page/cardapioMarselha.jpg" alt="foto-cardapio-Marselha" class="img-fluid">
-                            </a>
-                            <p>
-                                Novo cardápio Marselha! Destaque para os crepes de presunto e tomate; 
-                                frango e bacon; três queijos; e os clássicos de chocolate com morango; 
-                                e doce de leite com banana.
-                            </p>
-                            <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
-                        </div>
 
-                        <div class="menu-card">
-                            <h2>Cardápio Premier</h2>
-                            <a href="cardapios/" target="_self" class="d-flex justify-content-center">
-                                <img src="img/menu_Page/cardapioPremier.jpg" alt="foto-cardapio-Premier" class="img-fluid">
-                            </a>
-                            <p>
-                                Novo cardápio Premier! Destaque para os crepes de alcatra ao molho madeira; frango e bacon; três queijos; 
-                                chocolate branco e morango; os clássicos de chocolate com morango; 
-                                e doce de leite com banana; e o famoso crepe de Nutella.
-                            </p>
-                            <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
-                        </div>
+                <div class="menu-card">
+                    <h2>Cardápio Premier</h2>
+                    <img src="img/menu_Page/cardapioPremier.jpg"
+                        alt="foto-cardapio-Premier"
+                        class="img-fluid"
+                        onclick="abrirModal(1)"
+                        style="cursor: pointer;">
+                    </a>
+                    <p>
+                        Novo cardápio Premier! Destaque para os crepes de alcatra ao molho madeira; frango e bacon; três queijos; 
+                        chocolate branco e morango; os clássicos de chocolate com morango; 
+                        e doce de leite com banana; e o famoso crepe de Nutella.
+                    </p>
+                    <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
+                </div>
 
-                        <div class="menu-card">
-                            <h2>Cardápio Paris</h2>
-                            <a href="cardapios/" target="_self" class="d-flex justify-content-center">
-                                <img src="img/menu_Page/cardapioParis.jpg" alt="foto-cardapio-Paris" class="img-fluid">
-                            </a>
-                            <p>
-                                Novo cardápio Paris! Destaque para os crepes de camarão ao vinho branco; alcatra ao molho madeira; 
-                                três queijos; doce de leite e sorvete; chocolate branco e morango; 
-                                os clássicos de chocolate com morango; e doce de leite com banana; 
-                                e o famoso crepe de Nutella.
-                            </p>
-                            <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
-                        </div>
 
-                        <div class="menu-card menu-card-legrand">
-                            <h2>Cardápio Le Grand</h2>
-                            <a href="cardapios/" target="_self" class="d-flex justify-content-center">
-                                <img src="img/menu_Page/cardapioLeGrand.jpg" alt="foto-cardapio-LeGrand" class="img-fluid">
-                            </a>
-                            <p>
-                                Novo cardápio Le Grand! Destaque para os crepes de mignon; camarão ao vinho branco; carne seca; 
-                                frango e rúcula; três queijos; o delicioso crepe Suzette flambado com licor Grand Marnier; 
-                                o clássico de chocolate com morango; e o famoso crepe de Nutella.
-                            </p>
-                            <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
-                        </div>
+                <div class="menu-card">
+                    <h2>Cardápio Paris</h2>
+                    <img src="img/menu_Page/cardapioParis.jpg"
+                        alt="foto-cardapio-Paris"
+                        class="img-fluid"
+                        onclick="abrirModal(2)"
+                        style="cursor: pointer;">
+                    </a>
+                    <p>
+                        Novo cardápio Paris! Destaque para os crepes de camarão ao vinho branco; alcatra ao molho madeira; 
+                        três queijos; doce de leite e sorvete; chocolate branco e morango; 
+                        os clássicos de chocolate com morango; e doce de leite com banana; 
+                        e o famoso crepe de Nutella.
+                    </p>
+                    <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
+                </div>
 
-                    </div>
+
+                <div class="menu-card menu-card-legrand">
+                    <h2>Cardápio Le Grand</h2>
+                    <img src="img/menu_Page/cardapioLeGrand.jpg"
+                        alt="foto-cardapio-LeGrand"
+                        class="img-fluid"
+                        onclick="abrirModal(3)"
+                        style="cursor: pointer;">
+                    </a>
+                    <p>
+                        Novo cardápio Le Grand! Destaque para os crepes de mignon; camarão ao vinho branco; carne seca; 
+                        frango e rúcula; três queijos; o delicioso crepe Suzette flambado com licor Grand Marnier; 
+                        o clássico de chocolate com morango; e o famoso crepe de Nutella.
+                    </p>
+                    <a href="form.html" class="btn btn-outline-danger btn-sm">Ler mais</a>
                 </div>
             </section>
         </div>
     </section>
 </main>
 
+<div id="modal" class="modal">
+    <div id="modal-conteudo" class="modal-conteudo"></div>
+</div>
 
 <footer class="footer">
     <div class="container">
@@ -196,6 +212,7 @@ Autor: Thiago Bortolan de Oliveira
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
