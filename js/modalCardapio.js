@@ -28,14 +28,16 @@ function abrirModal(index) {
 
     overlay.classList.add("ativo");
 
+    document.body.style.overflow = "hidden";
+
     carregarCardapio("right");
 
-    // fechar clicando fora
+    // fechar o modal clicando fora
     overlay.onclick = (e) => {
         if (e.target === overlay) fecharModal();
     };
 
-    // fechar com ESC
+    // fechar o modal com a tecla ESC
     document.onkeydown = (e) => {
         if (e.key === "Escape") fecharModal();
     };
@@ -121,4 +123,6 @@ function adicionarBotoes() {
 function fecharModal() {
     const overlay = document.getElementById("modal");
     if (overlay) overlay.classList.remove("ativo");
+
+    document.body.style.overflow = "auto";
 }
