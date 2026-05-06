@@ -10,16 +10,34 @@ Data Criação: 29/11/2025
 =========================================================== */
 
 /* ============ CONTROLE MENU FECHAR============ */
+const menu = document.getElementById('menuNav');
+const toggler = document.querySelector('.navbar-toggler');
 
+// Bloquea o scroll do body
+menu.addEventListener('shown.bs.collapse', () => {
+  document.body.style.overflow = "hidden";
+});
+
+menu.addEventListener('hidden.bs.collapse', () => {
+  document.body.style.overflow = "auto";
+});
+
+// Fecha o menuNav clicando fora
 document.addEventListener('click', function (event) {
-  const menu = document.getElementById('menuNav');
-  const toggler = document.querySelector('.navbar-toggler');
-
   if (!menu.classList.contains('show')) return;
 
   if (menu.contains(event.target) || toggler.contains(event.target)) return;
 
-  menu.classList.remove('show');
+  const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menu);
+  bsCollapse.hide();
+});
+
+// Fecha o menuNav com a tecla ESC
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && menu.classList.contains('show')) {
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menu);
+    bsCollapse.hide();
+  }
 });
 
 
