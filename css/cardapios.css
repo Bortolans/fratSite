@@ -218,3 +218,192 @@ TEXT
     margin-bottom: 1px;
 }
 
+/* ===========================================================
+RESPONSIVIDADE
+=========================================================== */
+
+/* === Desktop / Laptop === */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    #modal-conteudo {
+        max-width: 800px;
+        padding: 20px;
+    }
+
+    .btnPrev { left: 5%; }
+    .btnNext { right: 5%; }
+    .btnClose { right: 5%; }
+}
+
+
+/* ======== TABLET / LAPTOP ======== */
+@media (min-width: 822px) and (max-width: 991px) {
+
+    #modal-conteudo {
+        max-width: 700px;
+        padding: 18px;
+    }
+
+    .btnPrev, .btnNext {
+        height: 120px;
+        width: 45px;
+    }
+
+    .btnPrev { left: 6%; }
+    .btnNext { right: 6%; }
+    .btnClose { right: 6%; }
+
+    .menu-marselha {
+        padding: 2rem;
+        font-size: 17px;
+    }
+}
+
+
+/* ======== TABLET ======== */
+@media (min-width: 769px) and (max-width: 821px) {
+
+    #modal-conteudo {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .btnPrev, .btnNext {
+        height: 110px;
+        width: 40px;
+    }
+
+    .btnPrev { left: 5%; }
+    .btnNext { right: 5%; }
+    .btnClose { right: 5%; }
+
+    .menu-marselha {
+        padding: 1.8rem;
+        font-size: 16.5px;
+    }
+}
+
+
+/* ======== TABLET PEQUENO / MOBILE GRANDE ======== */
+@media (min-width: 630px) and (max-width: 768px) {
+
+    #modal-conteudo {
+        width: 95%;
+        max-height: 85vh;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .btnPrev, .btnNext {
+        height: 90px;
+        width: 35px;
+        font-size: 1.5rem;
+    }
+
+    .btnPrev { left: 3%; }
+    .btnNext { right: 3%; }
+
+    .btnClose {
+        width: 45px;
+        height: 45px;
+        top: 1rem;
+        right: 3%;
+    }
+
+    .menu-marselha {
+        padding: 1.5rem;
+        font-size: 16px;
+    }
+
+    .menu-marselha h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ======== MOBILE PEQUENO ======== */
+@media (max-width: 629px) {
+
+    #modal-conteudo {
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    /* remove setas grandes estilo Netflix */
+    .btnPrev, .btnNext {
+        width: 40px;
+        height: 40px;
+        top: auto;
+        bottom: 15px;
+        transform: none;
+    }
+
+    .btnPrev { left: 20%; }
+    .btnNext { right: 20%; }
+
+    .btnClose {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu-marselha {
+        padding: 1rem;
+        font-size: 15.5px;
+    }
+
+    .menu-marselha h2 {
+        font-size: 1.4rem;
+    }
+
+    .menu-marselha h3 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* === Mobile muito pequeno === */
+@media (max-width: 380px) {
+
+    .menu-marselha {
+        padding: 0.8rem;
+        font-size: 14.5px;
+    }
+
+    .menu-marselha h2 {
+        font-size: 1.2rem;
+    }
+
+    .menu-marselha h3 {
+        font-size: 1.1rem;
+    }
+
+    .menu-marselha li {
+        font-size: 14px;
+    }
+
+    .btnPrev { left: 2%; }
+    .btnNext { right: 2%; }
+
+    .btnPrev, .btnNext {
+        width: 35px;
+        height: 35px;
+        bottom: 10px;
+    }
+
+    .btnClose {
+        width: 35px;
+        height: 35px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .quote-btn {
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+}
