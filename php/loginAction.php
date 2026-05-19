@@ -20,9 +20,11 @@ require 'db.php';
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-// Busca o usuário no banco
-$sql = "SELECT * FROM admins WHERE usuario = '$usuario' LIMIT 1";
-$result = $conn->query($sql);
+// Busca e valida o usuário no banco
+$stmt = $conn->prepare("SELECT * FROM admins WHERE usuario = ? LIMIT 1");
+$stmt->bind_param("s", $usuario);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if($result->num_rows === 1){
     $admin = $result->fetch_assoc();

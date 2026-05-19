@@ -14,8 +14,6 @@ Data Criação: 27/11/2025
 
 
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 // Conecta ao banco de dados
 require_once "db.php";
